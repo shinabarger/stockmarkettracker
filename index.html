@@ -258,6 +258,8 @@
   // the badge colors used elsewhere on the page.
   const POSITIVE_COLOR = "#15803d";
   const NEGATIVE_COLOR = "#1d4ed8";
+  const BASELINE_COLOR = "#a855f7"; // dashed reference line marking the starting value
+  const BASELINE_LABEL = "Starting value";
 
   let history = [];      // [{ date: "YYYY-MM-DD", close: number }, ...] sorted ascending
   let currentRange = "mtd";
@@ -458,6 +460,11 @@
     const values = slice.map((point) => point.close);
     const lineColor = isPositive ? POSITIVE_COLOR : NEGATIVE_COLOR;
 
+    // A flat dashed line at the starting value, so it's easy to see at a
+    // glance how far the price has moved from where the period began.
+    const startingValue = values[0];
+    const baselineValues = values.map(() => startingValue);
+
     try {
       if (chart) {
         chart.destroy();
@@ -468,6 +475,15 @@
         data: {
           labels,
           datasets: [
+            {
+              label: BASELINE_LABEL,
+              data: baselineValues,
+              borderColor: BASELINE_COLOR,
+              borderDash: [6, 4],
+              borderWidth: 1.5,
+              pointRadius: 0,
+              fill: false,
+            },
             {
               label: "VTSAX",
               data: values,
@@ -494,6 +510,9 @@
           plugins: {
             legend: { display: false },
             tooltip: {
+              // The baseline is just a visual reference, not something worth
+              // a tooltip row of its own.
+              filter: (item) => item.dataset.label !== BASELINE_LABEL,
               callbacks: {
                 title: (items) => formatDisplayDate(items[0].label),
                 label: (item) => formatCurrency(item.parsed.y),
