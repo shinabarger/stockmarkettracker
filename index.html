@@ -14,8 +14,8 @@
     --accent: #2563eb;
     --positive: #15803d;
     --positive-bg: #dcfce7;
-    --negative: #b91c1c;
-    --negative-bg: #fee2e2;
+    --negative: #1d4ed8;
+    --negative-bg: #dbeafe;
     --border: #e5e7eb;
   }
 
@@ -40,9 +40,15 @@
   }
 
   header .subtitle {
-    margin: 0 0 24px;
+    margin: 0;
     color: var(--muted);
     font-size: 0.9rem;
+  }
+
+  header .today-date {
+    margin: 2px 0 24px;
+    color: var(--muted);
+    font-size: 0.8rem;
   }
 
   .card {
@@ -53,6 +59,16 @@
     margin-bottom: 16px;
   }
 
+  .headline-card .headline {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .headline .positive { color: var(--positive); }
+  .headline .negative { color: var(--negative); }
+
   .summary-card {
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +77,48 @@
     gap: 16px;
   }
 
-  .current-value .label {
+  /* Percent change goes on the left: it's the number people care about most. */
+  .change-block {
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: var(--border);
+  }
+
+  .change-block.positive {
+    background: var(--positive-bg);
+    color: var(--positive);
+  }
+
+  .change-block.negative {
+    background: var(--negative-bg);
+    color: var(--negative);
+  }
+
+  .change-block .change-percent {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .change-block .change-amount {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .change-block .change-label {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.85;
+    margin-top: 2px;
+  }
+
+  .value-block {
+    text-align: right;
+  }
+
+  .value-block .label {
     display: block;
     font-size: 0.8rem;
     color: var(--muted);
@@ -69,47 +126,19 @@
     letter-spacing: 0.04em;
   }
 
-  .current-value .value {
+  .value-block .value {
     display: block;
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 1.2;
   }
 
-  .current-value .updated {
+  .value-block .updated,
+  .value-block .reference-value {
     display: block;
     font-size: 0.8rem;
     color: var(--muted);
     margin-top: 2px;
-  }
-
-  .change-badge {
-    padding: 10px 18px;
-    border-radius: 10px;
-    text-align: right;
-    background: var(--border);
-  }
-
-  .change-badge.positive {
-    background: var(--positive-bg);
-    color: var(--positive);
-  }
-
-  .change-badge.negative {
-    background: var(--negative-bg);
-    color: var(--negative);
-  }
-
-  .change-badge #change-percent {
-    display: block;
-    font-size: 1.4rem;
-    font-weight: 700;
-  }
-
-  .change-badge .change-label {
-    display: block;
-    font-size: 0.75rem;
-    opacity: 0.85;
   }
 
   .range-toggle {
@@ -168,17 +197,24 @@
     <header>
       <h1>VTSAX Tracker</h1>
       <p class="subtitle">Vanguard Total Stock Market Index Fund &mdash; Admiral Shares</p>
+      <p class="today-date" id="today-date">&nbsp;</p>
     </header>
 
+    <section class="card headline-card">
+      <p class="headline" id="headline">Loading&hellip;</p>
+    </section>
+
     <section class="card summary-card">
-      <div class="current-value">
-        <span class="label">Current NAV</span>
+      <div class="change-block" id="change-block">
+        <span class="change-percent" id="change-percent">&mdash;</span>
+        <span class="change-amount" id="change-amount">&nbsp;</span>
+        <span class="change-label" id="change-label">&mdash;</span>
+      </div>
+      <div class="value-block">
+        <span class="label">Current Value</span>
         <span id="current-price" class="value">Loading&hellip;</span>
         <span id="last-updated" class="updated">&nbsp;</span>
-      </div>
-      <div class="change-badge" id="change-badge">
-        <span id="change-percent">&mdash;</span>
-        <span id="change-label" class="change-label">&mdash;</span>
+        <span id="reference-value" class="reference-value">&nbsp;</span>
       </div>
     </section>
 
@@ -208,6 +244,11 @@
 <script>
   const DATA_URL = "data/vtsax_history.json";
 
+  // Colors are pulled from CSS variables so the chart line always matches
+  // the badge colors used elsewhere on the page.
+  const POSITIVE_COLOR = "#15803d";
+  const NEGATIVE_COLOR = "#1d4ed8";
+
   let history = [];      // [{ date: "YYYY-MM-DD", close: number }, ...] sorted ascending
   let currentRange = "mtd";
   let chart = null;
@@ -228,6 +269,13 @@
 
   function formatCurrency(value) {
     return "$" + value.toFixed(2);
+  }
+
+  // Same as formatCurrency, but always shows a +/- sign. Used for dollar
+  // changes, where the sign carries meaning.
+  function formatSignedCurrency(value) {
+    const sign = value >= 0 ? "+" : "-";
+    return `${sign}$${Math.abs(value).toFixed(2)}`;
   }
 
   function formatPercent(value) {
@@ -304,44 +352,88 @@
     return -1;
   }
 
+  // Returns { current, reference, dollarChange, percentChange } for the
+  // given reference index, or null if there isn't a valid reference point.
   function computeChange(referenceIndex) {
     if (referenceIndex < 0 || referenceIndex >= history.length) return null;
 
     const current = history[history.length - 1].close;
     const reference = history[referenceIndex].close;
-    const percentChange = ((current - reference) / reference) * 100;
+    const dollarChange = current - reference;
+    const percentChange = (dollarChange / reference) * 100;
 
-    return { current, reference, percentChange };
+    return { current, reference, dollarChange, percentChange };
   }
 
-  function renderSummary(referenceIndex) {
+  function buildHeadlineText(change, referenceDateStr) {
+    const direction = change.percentChange >= 0 ? "increased" : "decreased";
+    const directionClass = change.percentChange >= 0 ? "positive" : "negative";
+    const dollarAmount = formatCurrency(Math.abs(change.dollarChange));
+    const percentAmount = Math.abs(change.percentChange).toFixed(2);
+
+    return (
+      `Since ${formatDisplayDate(referenceDateStr)}, VTSAX has ` +
+      `<span class="${directionClass}">${direction}</span> by ${dollarAmount} ` +
+      `by ${percentAmount}%.`
+    );
+  }
+
+  function renderTodayDate() {
+    const today = new Date().toLocaleDateString("en-US", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+    document.getElementById("today-date").textContent = `Today: ${today}`;
+  }
+
+  function renderHeadline(change, referenceIndex) {
+    const headlineEl = document.getElementById("headline");
+
+    if (!change) {
+      headlineEl.textContent = "Not enough history yet to show a comparison.";
+      return;
+    }
+
+    headlineEl.innerHTML = buildHeadlineText(change, history[referenceIndex].date);
+  }
+
+  function renderSummary(change, referenceIndex) {
     const last = history[history.length - 1];
     document.getElementById("current-price").textContent = formatCurrency(last.close);
     document.getElementById("last-updated").textContent = `As of ${formatDisplayDate(last.date)}`;
 
-    const badge = document.getElementById("change-badge");
+    const changeBlock = document.getElementById("change-block");
     const percentEl = document.getElementById("change-percent");
+    const amountEl = document.getElementById("change-amount");
     const labelEl = document.getElementById("change-label");
-    const change = computeChange(referenceIndex);
+    const referenceEl = document.getElementById("reference-value");
 
-    badge.classList.remove("positive", "negative");
+    changeBlock.classList.remove("positive", "negative");
 
     if (change) {
+      const reference = history[referenceIndex];
       percentEl.textContent = formatPercent(change.percentChange);
-      labelEl.textContent = `since ${formatDisplayDate(history[referenceIndex].date)}`;
-      badge.classList.add(change.percentChange >= 0 ? "positive" : "negative");
+      amountEl.textContent = formatSignedCurrency(change.dollarChange);
+      labelEl.textContent = `since ${formatDisplayDate(reference.date)}`;
+      referenceEl.textContent = `Previous: ${formatCurrency(reference.close)} (${formatDisplayDate(reference.date)})`;
+      changeBlock.classList.add(change.percentChange >= 0 ? "positive" : "negative");
     } else {
       percentEl.textContent = "—";
+      amountEl.textContent = "";
       labelEl.textContent = "Not enough history yet";
+      referenceEl.textContent = "";
     }
   }
 
-  function renderChart(referenceIndex) {
+  function renderChart(referenceIndex, isPositive) {
     const startIndex = Math.max(referenceIndex, 0);
     const slice = history.slice(startIndex);
 
     const labels = slice.map((point) => point.date);
     const values = slice.map((point) => point.close);
+    const lineColor = isPositive ? POSITIVE_COLOR : NEGATIVE_COLOR;
 
     if (chart) {
       chart.destroy();
@@ -355,10 +447,11 @@
           {
             label: "VTSAX",
             data: values,
-            borderColor: "#2563eb",
-            backgroundColor: "rgba(37, 99, 235, 0.08)",
+            borderColor: lineColor,
+            backgroundColor: lineColor + "14", // faint fill, same hue as the line
             borderWidth: 2,
             pointRadius: 0,
+            pointHoverRadius: 4,
             fill: true,
             tension: 0.15,
           },
@@ -367,26 +460,42 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        // Lets the tooltip follow the mouse horizontally without needing to
+        // land exactly on a data point, standard behavior for stock charts.
+        interaction: { mode: "index", intersect: false },
         scales: {
           x: { ticks: { maxTicksLimit: 8 } },
           y: { ticks: { callback: (v) => "$" + v.toFixed(0) } },
         },
-        plugins: { legend: { display: false } },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: (items) => formatDisplayDate(items[0].label),
+              label: (item) => formatCurrency(item.parsed.y),
+            },
+          },
+        },
       },
     });
   }
 
   function render() {
+    renderTodayDate();
+
     if (history.length === 0) {
+      document.getElementById("headline").textContent = "Waiting for the first scheduled update.";
       document.getElementById("current-price").textContent = "No data yet";
-      document.getElementById("last-updated").textContent =
-        "Waiting for the first scheduled update";
+      document.getElementById("last-updated").textContent = "";
       return;
     }
 
     const referenceIndex = findReferenceIndex(currentRange);
-    renderSummary(referenceIndex);
-    renderChart(referenceIndex);
+    const change = computeChange(referenceIndex);
+
+    renderHeadline(change, referenceIndex);
+    renderSummary(change, referenceIndex);
+    renderChart(referenceIndex, !change || change.percentChange >= 0);
   }
 
   function selectRange(range) {
