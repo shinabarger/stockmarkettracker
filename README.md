@@ -1,9 +1,9 @@
 # VTSAX Tracker
 
-A one-click, always-on dashboard for VTSAX (Vanguard Total Stock Market Index
-Fund, Admiral Shares). Shows the current NAV and how it's moved since the
+https://shinabarger.github.io/vtsax-tracker/ is a one-click, dashboard for VTSAX (Vanguard Total Stock Market Index
+Fund, Admiral Shares). Shows the current value and how it has updated since the
 start of the month, the start of the year, the past year, or however many
-years back you want to look.
+years back you would like to examine.
 
 ## How it works
 
@@ -25,19 +25,6 @@ The first time the workflow runs, it'll notice there's no history yet and
 pull the full available price history in one shot (this may take a little
 longer than later runs, which only check the last 10 days).
 
-## Setup
-
-1. Push this folder to a new GitHub repository.
-2. In the repo, go to **Settings → Actions → General → Workflow permissions**
-   and select **Read and write permissions**. (This lets the scheduled
-   workflow commit updated data back to the repo.)
-3. Go to **Settings → Pages**, set **Source** to your default branch
-   (usually `main`) and folder `/ (root)`.
-4. Go to the **Actions** tab, open **Update VTSAX data**, and click
-   **Run workflow** once to do the initial backfill instead of waiting for
-   the next scheduled run.
-5. Once Pages finishes deploying (a minute or two), your dashboard is live at
-   `https://<your-username>.github.io/<repo-name>/`.
 
 ## Notes
 
