@@ -73,6 +73,8 @@
   .headline .positive { color: var(--positive); }
   .headline .negative { color: var(--negative); }
 
+  /* The ticker symbol embedded inline in the headline sentence, styled to
+     look clickable so it reads as "tap to change stock." */
   .ticker-trigger {
     font: inherit;
     font-weight: 700;
@@ -154,6 +156,7 @@
     gap: 16px;
   }
 
+  /* Percent change goes on the left: it's the number people care about most. */
   .change-block {
     padding: 10px 18px;
     border-radius: 10px;
@@ -743,16 +746,39 @@
 
   // --- Ticker search / switcher -----------------------------------------
 
+  // Ranks a ticker against the search query so prefix matches on the symbol
+  // (typing "N" should surface N-prefixed tickers) always beat a symbol or
+  // name that merely contains the query somewhere in the middle. Without
+  // this, a query like "NI" could get crowded out by unrelated tickers
+  // like "AON" that happen to contain those letters but sort earlier
+  // alphabetically.
+  function matchScore(ticker, query) {
+    const symbol = ticker.symbol.toLowerCase();
+    const name = ticker.name.toLowerCase();
+
+    if (symbol === query) return 0;
+    if (symbol.startsWith(query)) return 1;
+    if (name.startsWith(query)) return 2;
+    if (symbol.includes(query)) return 3;
+    if (name.includes(query)) return 4;
+    return -1; // no match
+  }
+
+  function findMatchingTickers(query) {
+    const normalizedQuery = query.trim().toLowerCase();
+    if (!normalizedQuery) return universe.slice(0, MAX_SEARCH_RESULTS);
+
+    return universe
+      .map((ticker) => ({ ticker, score: matchScore(ticker, normalizedQuery) }))
+      .filter((entry) => entry.score >= 0)
+      .sort((a, b) => a.score - b.score || a.ticker.symbol.localeCompare(b.ticker.symbol))
+      .slice(0, MAX_SEARCH_RESULTS)
+      .map((entry) => entry.ticker);
+  }
+
   function renderTickerResults(query) {
     const resultsEl = document.getElementById("ticker-results");
-    const normalizedQuery = query.trim().toLowerCase();
-
-    const matches = (normalizedQuery
-      ? universe.filter((t) =>
-          t.symbol.toLowerCase().includes(normalizedQuery) ||
-          t.name.toLowerCase().includes(normalizedQuery))
-      : universe
-    ).slice(0, MAX_SEARCH_RESULTS);
+    const matches = findMatchingTickers(query);
 
     if (matches.length === 0) {
       resultsEl.innerHTML = `<li class="ticker-no-results">No matching tickers</li>`;
@@ -767,10 +793,31 @@
       .join("");
   }
 
+  // Positions the picker so its top left corner lines up with the bottom
+  // left corner of whichever ticker button was clicked, rather than always
+  // opening in a fixed spot on the card.
+  function positionTickerPicker(picker) {
+    const trigger = document.getElementById("ticker-trigger");
+    const card = document.querySelector(".headline-card");
+    if (!trigger || !card) return;
+
+    const triggerRect = trigger.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+
+    let left = triggerRect.left - cardRect.left;
+    left = Math.min(left, cardRect.width - picker.offsetWidth - 10);
+    left = Math.max(left, 10);
+
+    picker.style.left = `${left}px`;
+    picker.style.top = `${triggerRect.bottom - cardRect.top + 6}px`;
+  }
+
   function openTickerPicker() {
     const picker = document.getElementById("ticker-picker");
     const input = document.getElementById("ticker-search-input");
+
     picker.hidden = false;
+    positionTickerPicker(picker);
     input.value = "";
     renderTickerResults("");
     input.focus();
