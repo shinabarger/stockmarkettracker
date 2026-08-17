@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>VTSAX Tracker</title>
+<title>Stock Tracker</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
   :root {
@@ -59,6 +59,10 @@
     margin-bottom: 16px;
   }
 
+  .headline-card {
+    position: relative;
+  }
+
   .headline-card .headline {
     margin: 0;
     font-size: 1.3rem;
@@ -69,6 +73,79 @@
   .headline .positive { color: var(--positive); }
   .headline .negative { color: var(--negative); }
 
+  .ticker-trigger {
+    font: inherit;
+    font-weight: 700;
+    color: var(--accent);
+    background: none;
+    border: none;
+    padding: 0 2px;
+    cursor: pointer;
+    border-bottom: 2px dotted var(--accent);
+  }
+
+  .ticker-caret {
+    font-size: 0.7em;
+  }
+
+  .ticker-picker {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    z-index: 30;
+    width: 320px;
+    max-width: calc(100vw - 40px);
+    margin-top: 6px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+  }
+
+  .ticker-search-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .ticker-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 260px;
+    overflow-y: auto;
+  }
+
+  .ticker-result {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ticker-result:hover,
+  .ticker-result.highlighted {
+    background: var(--bg);
+  }
+
+  .ticker-result .symbol {
+    font-weight: 700;
+    margin-right: 6px;
+  }
+
+  .ticker-no-results {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
   .summary-card {
     display: flex;
     flex-wrap: wrap;
@@ -77,7 +154,6 @@
     gap: 16px;
   }
 
-  /* Percent change goes on the left: it's the number people care about most. */
   .change-block {
     padding: 10px 18px;
     border-radius: 10px;
@@ -190,6 +266,26 @@
     margin: 0;
   }
 
+  .invest-card .invest-text {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .invest-amount-input {
+    width: 110px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 3px 6px;
+    font: inherit;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .invest-result {
+    color: var(--accent);
+  }
+
   footer {
     text-align: center;
     color: var(--muted);
@@ -205,13 +301,24 @@
 <body>
   <div class="container">
     <header>
-      <h1>VTSAX Tracker</h1>
-      <p class="subtitle">Vanguard Total Stock Market Index Fund &mdash; Admiral Shares</p>
+      <h1>Stock Tracker</h1>
+      <p class="subtitle" id="subtitle">Loading&hellip;</p>
       <p class="today-date" id="today-date">&nbsp;</p>
     </header>
 
     <section class="card headline-card">
       <p class="headline" id="headline">Loading&hellip;</p>
+
+      <div class="ticker-picker" id="ticker-picker" hidden>
+        <input
+          type="text"
+          id="ticker-search-input"
+          class="ticker-search-input"
+          placeholder="Search ticker or company name"
+          autocomplete="off"
+        />
+        <ul class="ticker-results" id="ticker-results"></ul>
+      </div>
     </section>
 
     <section class="card summary-card">
@@ -236,6 +343,7 @@
         <div class="toggle-btn" data-range="ny" id="ny-toggle">
           Past <input type="number" id="years-input" min="1" max="50" value="5" /> Years
         </div>
+        <button class="toggle-btn" data-range="all">All Time</button>
       </div>
     </section>
 
@@ -243,16 +351,33 @@
       <canvas id="price-chart"></canvas>
     </section>
 
+    <section class="card invest-card">
+      <p class="invest-text" id="invest-text">
+        If you had $<input
+          type="text"
+          inputmode="numeric"
+          id="invest-amount"
+          class="invest-amount-input"
+          value="100,000"
+        /> invested at <span id="invest-date">&mdash;</span>, it would now be worth
+        <strong class="invest-result" id="invest-result">&mdash;</strong>.
+      </p>
+    </section>
+
     <footer>
       <p>
-        Data source: Yahoo Finance, fetched automatically by a scheduled GitHub Action
-        after each business day's market close at 6:30pm ET. This is not financial advice.
+        Data source: Yahoo Finance, updated automatically around 6:30pm ET after each
+        trading day's market close. Weekends and market holidays are skipped since
+        there's no new closing price to fetch when the market is closed. This is not
+        financial advice.
       </p>
     </footer>
   </div>
 
 <script>
-  const DATA_URL = "data/vtsax_history.json";
+  const DEFAULT_SYMBOL = "VTSAX";
+  const UNIVERSE_URL = "data/universe.json";
+  const MAX_SEARCH_RESULTS = 25;
 
   // Colors are pulled from CSS variables so the chart line always matches
   // the badge colors used elsewhere on the page.
@@ -261,17 +386,48 @@
   const BASELINE_COLOR = "#a855f7"; // dashed reference line marking the starting value
   const BASELINE_LABEL = "Starting value";
 
+  let universe = [];     // [{ symbol, name }, ...] every ticker this tool can track
   let history = [];      // [{ date: "YYYY-MM-DD", close: number }, ...] sorted ascending
+  let currentSymbol = DEFAULT_SYMBOL;
   let currentRange = "mtd";
   let chart = null;
 
-  async function loadHistory() {
+  // Cached so the "hypothetical investment" section can be recalculated the
+  // moment the amount input changes, without re-fetching or re-rendering
+  // everything else.
+  let lastChange = null;
+  let lastReferenceIndex = -1;
+
+  function priceFileUrl(symbol) {
+    return `data/prices/${encodeURIComponent(symbol)}.json`;
+  }
+
+  function escapeHtml(text) {
+    return text.replace(/[&<>"']/g, (ch) => (
+      { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]
+    ));
+  }
+
+  async function loadUniverse() {
     try {
-      const response = await fetch(DATA_URL, { cache: "no-store" });
-      history = await response.json();
+      const response = await fetch(UNIVERSE_URL, { cache: "no-store" });
+      universe = await response.json();
+    } catch (err) {
+      universe = [];
+    }
+  }
+
+  async function loadHistoryFor(symbol) {
+    currentSymbol = symbol;
+    renderHeaderSubtitle(symbol);
+
+    try {
+      const response = await fetch(priceFileUrl(symbol), { cache: "no-store" });
+      history = response.ok ? await response.json() : [];
     } catch (err) {
       history = [];
     }
+
     render();
   }
 
@@ -280,14 +436,17 @@
   }
 
   function formatCurrency(value) {
-    return "$" + value.toFixed(2);
+    return "$" + value.toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
   }
 
   // Same as formatCurrency, but always shows a +/- sign. Used for dollar
   // changes, where the sign carries meaning.
   function formatSignedCurrency(value) {
     const sign = value >= 0 ? "+" : "-";
-    return `${sign}$${Math.abs(value).toFixed(2)}`;
+    return `${sign}${formatCurrency(Math.abs(value))}`;
   }
 
   function formatPercent(value) {
@@ -297,7 +456,7 @@
 
   function formatDisplayDate(dateStr) {
     return parseDate(dateStr).toLocaleDateString("en-US", {
-      month: "short",
+      month: "long",
       day: "numeric",
       year: "numeric",
     });
@@ -335,6 +494,8 @@
   // currently selected range, or -1 if there isn't enough history yet.
   function findReferenceIndex(range) {
     if (history.length === 0) return -1;
+
+    if (range === "all") return 0;
 
     const lastDate = parseDate(history[history.length - 1].date);
 
@@ -377,14 +538,21 @@
     return { current, reference, dollarChange, percentChange };
   }
 
-  function buildHeadlineText(change, referenceDateStr) {
+  function buildTickerTrigger(symbol) {
+    return (
+      `<button type="button" class="ticker-trigger" id="ticker-trigger">` +
+      `${escapeHtml(symbol)} <span class="ticker-caret">&#9662;</span></button>`
+    );
+  }
+
+  function buildHeadlineText(change, referenceDateStr, symbol) {
     const direction = change.percentChange >= 0 ? "increased" : "decreased";
     const directionClass = change.percentChange >= 0 ? "positive" : "negative";
     const dollarAmount = formatCurrency(Math.abs(change.dollarChange));
     const percentAmount = Math.abs(change.percentChange).toFixed(2);
 
     return (
-      `Since ${formatDisplayDate(referenceDateStr)}, VTSAX has ` +
+      `Since ${formatDisplayDate(referenceDateStr)}, ${buildTickerTrigger(symbol)} has ` +
       `<span class="${directionClass}">${direction}</span> by ${dollarAmount} ` +
       `by ${percentAmount}%.`
     );
@@ -400,15 +568,22 @@
     document.getElementById("today-date").textContent = `Today: ${today}`;
   }
 
-  function renderHeadline(change, referenceIndex) {
+  function renderHeaderSubtitle(symbol) {
+    const entry = universe.find((t) => t.symbol === symbol);
+    document.getElementById("subtitle").textContent = entry
+      ? `${entry.name} (${entry.symbol})`
+      : symbol;
+  }
+
+  function renderHeadline(change, referenceIndex, symbol) {
     const headlineEl = document.getElementById("headline");
 
     if (!change) {
-      headlineEl.textContent = "Not enough history yet to show a comparison.";
+      headlineEl.innerHTML = `Not enough history yet for ${buildTickerTrigger(symbol)} to show a comparison.`;
       return;
     }
 
-    headlineEl.innerHTML = buildHeadlineText(change, history[referenceIndex].date);
+    headlineEl.innerHTML = buildHeadlineText(change, history[referenceIndex].date, symbol);
   }
 
   function renderSummary(change, referenceIndex) {
@@ -439,6 +614,38 @@
     }
   }
 
+  // --- Hypothetical investment section -------------------------------
+
+  function parseAmountInput(rawValue) {
+    const digitsOnly = rawValue.replace(/[^0-9.]/g, "");
+    const value = parseFloat(digitsOnly);
+    return Number.isNaN(value) || value < 0 ? 0 : value;
+  }
+
+  function getInvestAmount() {
+    return parseAmountInput(document.getElementById("invest-amount").value);
+  }
+
+  function renderInvestmentSection(change, referenceIndex) {
+    const dateEl = document.getElementById("invest-date");
+    const resultEl = document.getElementById("invest-result");
+
+    if (!change) {
+      dateEl.textContent = "—";
+      resultEl.textContent = "—";
+      return;
+    }
+
+    const reference = history[referenceIndex];
+    const amount = getInvestAmount();
+    const resultValue = amount * (change.current / change.reference);
+
+    dateEl.textContent = formatDisplayDate(reference.date);
+    resultEl.textContent = formatCurrency(resultValue);
+  }
+
+  // --- Chart -----------------------------------------------------------
+
   function showChartError(message) {
     const canvas = document.getElementById("price-chart");
     canvas.replaceWith(Object.assign(document.createElement("p"), {
@@ -447,7 +654,7 @@
     }));
   }
 
-  function renderChart(referenceIndex, isPositive) {
+  function renderChart(referenceIndex, isPositive, symbol) {
     if (typeof Chart === "undefined") {
       showChartError("Chart failed to load (the charting library didn't reach the browser). Check your ad blocker or network settings and reload.");
       return;
@@ -485,7 +692,7 @@
               fill: false,
             },
             {
-              label: "VTSAX",
+              label: symbol,
               data: values,
               borderColor: lineColor,
               backgroundColor: lineColor + "14", // faint fill, same hue as the line
@@ -504,7 +711,14 @@
           // land exactly on a data point, standard behavior for stock charts.
           interaction: { mode: "index", intersect: false },
           scales: {
-            x: { ticks: { maxTicksLimit: 8 } },
+            x: {
+              ticks: {
+                maxTicksLimit: 8,
+                // labels are ISO date strings ("2026-07-31"); show them the
+                // same friendly way the rest of the page does.
+                callback: (value, index) => formatDisplayDate(labels[index]),
+              },
+            },
             y: { ticks: { callback: (v) => "$" + v.toFixed(0) } },
           },
           plugins: {
@@ -527,22 +741,93 @@
     }
   }
 
+  // --- Ticker search / switcher -----------------------------------------
+
+  function renderTickerResults(query) {
+    const resultsEl = document.getElementById("ticker-results");
+    const normalizedQuery = query.trim().toLowerCase();
+
+    const matches = (normalizedQuery
+      ? universe.filter((t) =>
+          t.symbol.toLowerCase().includes(normalizedQuery) ||
+          t.name.toLowerCase().includes(normalizedQuery))
+      : universe
+    ).slice(0, MAX_SEARCH_RESULTS);
+
+    if (matches.length === 0) {
+      resultsEl.innerHTML = `<li class="ticker-no-results">No matching tickers</li>`;
+      return;
+    }
+
+    resultsEl.innerHTML = matches
+      .map((t) =>
+        `<li class="ticker-result" data-symbol="${escapeHtml(t.symbol)}">` +
+        `<span class="symbol">${escapeHtml(t.symbol)}</span>${escapeHtml(t.name)}</li>`
+      )
+      .join("");
+  }
+
+  function openTickerPicker() {
+    const picker = document.getElementById("ticker-picker");
+    const input = document.getElementById("ticker-search-input");
+    picker.hidden = false;
+    input.value = "";
+    renderTickerResults("");
+    input.focus();
+  }
+
+  function closeTickerPicker() {
+    document.getElementById("ticker-picker").hidden = true;
+  }
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest(".ticker-trigger")) {
+      openTickerPicker();
+      return;
+    }
+
+    const resultItem = event.target.closest(".ticker-result");
+    if (resultItem && resultItem.dataset.symbol) {
+      closeTickerPicker();
+      loadHistoryFor(resultItem.dataset.symbol);
+      return;
+    }
+
+    if (!event.target.closest("#ticker-picker")) {
+      closeTickerPicker();
+    }
+  });
+
+  document.getElementById("ticker-search-input").addEventListener("input", (event) => {
+    renderTickerResults(event.target.value);
+  });
+
+  // --- Orchestration -----------------------------------------------------
+
   function render() {
     renderTodayDate();
 
     if (history.length === 0) {
-      document.getElementById("headline").textContent = "Waiting for the first scheduled update.";
+      document.getElementById("headline").innerHTML =
+        `Waiting for the first scheduled update for ${buildTickerTrigger(currentSymbol)}.`;
       document.getElementById("current-price").textContent = "No data yet";
       document.getElementById("last-updated").textContent = "";
+      lastChange = null;
+      lastReferenceIndex = -1;
+      renderInvestmentSection(null, -1);
       return;
     }
 
     const referenceIndex = findReferenceIndex(currentRange);
     const change = computeChange(referenceIndex);
 
-    renderHeadline(change, referenceIndex);
+    lastChange = change;
+    lastReferenceIndex = referenceIndex;
+
+    renderHeadline(change, referenceIndex, currentSymbol);
     renderSummary(change, referenceIndex);
-    renderChart(referenceIndex, !change || change.percentChange >= 0);
+    renderChart(referenceIndex, !change || change.percentChange >= 0, currentSymbol);
+    renderInvestmentSection(change, referenceIndex);
   }
 
   function selectRange(range) {
@@ -560,7 +845,20 @@
   document.getElementById("years-input").addEventListener("input", () => selectRange("ny"));
   document.getElementById("years-input").addEventListener("click", (e) => e.stopPropagation());
 
-  loadHistory();
+  document.getElementById("invest-amount").addEventListener("input", () => {
+    renderInvestmentSection(lastChange, lastReferenceIndex);
+  });
+  document.getElementById("invest-amount").addEventListener("blur", (event) => {
+    const amount = parseAmountInput(event.target.value);
+    event.target.value = amount.toLocaleString("en-US", { maximumFractionDigits: 0 });
+  });
+
+  async function init() {
+    await loadUniverse();
+    await loadHistoryFor(DEFAULT_SYMBOL);
+  }
+
+  init();
 </script>
 </body>
 </html>
