@@ -29,6 +29,7 @@ REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; vtsax-tracker-bot/1.0
 # 500 or listed on Nasdaq.
 EXTRA_TICKERS = [
     {"symbol": "VTSAX", "name": "Vanguard Total Stock Market Index Fund"},
+    {"symbol": "VTI", "name": "Vanguard Total Stock Market ETF"},
 ]
 
 
