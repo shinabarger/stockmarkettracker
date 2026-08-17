@@ -1,8 +1,8 @@
-name: Update VTSAX data
+name: Update stock prices
 
 on:
   schedule:
-    # Mutual fund NAVs post after the 4pm ET market close, usually by ~6-7pm ET.
+    # Markets close at 4pm ET; closing prices are generally available by ~6-7pm ET.
     # Cron runs in UTC and doesn't know about daylight saving, so each ET time
     # below needs two lines (EDT = UTC-4, EST = UTC-5).
 
@@ -10,7 +10,7 @@ on:
     - cron: "30 22 * * 1-5"   # EDT (Mar-Nov)
     - cron: "30 23 * * 1-5"   # EST (Nov-Mar)
 
-    # Backup run ~9:30pm ET in case a NAV posted late. Runs land on the
+    # Backup run ~9:30pm ET in case a price posted late. Runs land on the
     # following UTC calendar day, so the weekday range shifts by one.
     - cron: "30 1 * * 2-6"    # EDT (Mar-Nov)
     - cron: "30 2 * * 2-6"    # EST (Nov-Mar)
@@ -23,6 +23,10 @@ permissions:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    # The very first run backfills full history for every ticker in the
+    # universe (potentially thousands), which takes far longer than the
+    # day-to-day incremental runs after that.
+    timeout-minutes: 300
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
@@ -35,17 +39,24 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Fetch latest VTSAX price
-        run: python scripts/update_vtsax_data.py
+      - name: Make sure the ticker universe exists
+        run: |
+          if [ ! -f data/universe.json ]; then
+            echo "data/universe.json is missing. Run the 'Update ticker universe' workflow first."
+            exit 1
+          fi
+
+      - name: Fetch latest prices
+        run: python scripts/update_prices.py
 
       - name: Commit updated data if it changed
         run: |
-          if git diff --quiet -- data/vtsax_history.json; then
+          if git diff --quiet -- data/prices; then
             echo "No changes to commit."
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/vtsax_history.json
-          git commit -m "Update VTSAX data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git config user.name "Price Bot"
+          git config user.email "pricebot@vtsax-tracker.local"
+          git add data/prices
+          git commit -m "Update prices ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git push
