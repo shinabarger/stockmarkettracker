@@ -32,7 +32,7 @@ jobs:
 
       - name: Commit updated universe if it changed
         run: |
-          if git diff --quiet -- data/universe.json; then
+          if [ -z "$(git status --porcelain -- data/universe.json)" ]; then
             echo "No changes to commit."
             exit 0
           fi
