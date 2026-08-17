@@ -1,0 +1,43 @@
+name: Update ticker universe
+
+# Rebuilds data/universe.json: the S&P 500 constituent list plus every stock
+# listed on Nasdaq. This runs weekly rather than daily because index
+# membership and exchange listings change far less often than prices do.
+
+on:
+  schedule:
+    - cron: "0 12 * * 0" # Sunday at noon UTC
+  workflow_dispatch: {} # allows manually triggering a run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-universe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Build ticker universe
+        run: python scripts/build_universe.py
+
+      - name: Commit updated universe if it changed
+        run: |
+          if git diff --quiet -- data/universe.json; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "Price Bot"
+          git config user.email "pricebot@vtsax-tracker.local"
+          git add data/universe.json
+          git commit -m "Update ticker universe ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git push
