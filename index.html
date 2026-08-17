@@ -132,9 +132,34 @@
     text-overflow: ellipsis;
   }
 
-  .ticker-result:hover,
-  .ticker-result.highlighted {
+  .ticker-result:hover {
     background: var(--bg);
+  }
+
+  /* gives the keyboard-selected result a strong color change, separate from mouse hover, so arrow key users can always see which option enter will pick */
+  .ticker-result.highlighted {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* a visible outline on every focused control, since some browsers hide the default outline on custom-styled buttons and inputs */
+  button:focus-visible,
+  input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* hides text visually while keeping it readable by screen readers, used for labels and status text sighted users don't need to see */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   .ticker-result .symbol {
@@ -313,14 +338,22 @@
       <p class="headline" id="headline">Loading&hellip;</p>
 
       <div class="ticker-picker" id="ticker-picker" hidden>
+        <!-- a real label instead of only a placeholder, since placeholder text disappears once typing starts and some screen readers skip it entirely -->
+        <label for="ticker-search-input" class="sr-only">Search ticker or company name</label>
         <input
           type="text"
           id="ticker-search-input"
           class="ticker-search-input"
           placeholder="Search ticker or company name"
           autocomplete="off"
+          role="combobox"
+          aria-expanded="false"
+          aria-controls="ticker-results"
+          aria-autocomplete="list"
         />
-        <ul class="ticker-results" id="ticker-results"></ul>
+        <ul class="ticker-results" id="ticker-results" role="listbox"></ul>
+        <!-- announces how many results matched, since a screen reader user can't see the list change as they type -->
+        <div id="ticker-results-status" class="sr-only" aria-live="polite"></div>
       </div>
     </section>
 
@@ -542,9 +575,11 @@
   }
 
   function buildTickerTrigger(symbol) {
+    // aria-haspopup and aria-expanded tell screen readers this button opens a list, and aria-label reads the current stock instead of just a caret glyph
     return (
-      `<button type="button" class="ticker-trigger" id="ticker-trigger">` +
-      `${escapeHtml(symbol)} <span class="ticker-caret">&#9662;</span></button>`
+      `<button type="button" class="ticker-trigger" id="ticker-trigger" ` +
+      `aria-haspopup="listbox" aria-expanded="false" aria-label="Change stock, currently ${escapeHtml(symbol)}">` +
+      `${escapeHtml(symbol)} <span class="ticker-caret" aria-hidden="true">&#9662;</span></button>`
     );
   }
 
@@ -656,6 +691,7 @@
 
   function showChartError(message) {
     const canvas = document.getElementById("price-chart");
+    if (!canvas) return; // already replaced by an earlier error; nothing left to swap out
     canvas.replaceWith(Object.assign(document.createElement("p"), {
       className: "chart-error",
       textContent: message,
@@ -781,21 +817,70 @@
       .map((entry) => entry.ticker);
   }
 
+  // Tracks which result the keyboard highlight is on, so arrow keys and
+  // enter both act on the same option a sighted mouse user would click.
+  let highlightedIndex = -1;
+
   function renderTickerResults(query) {
     const resultsEl = document.getElementById("ticker-results");
+    const statusEl = document.getElementById("ticker-results-status");
     const matches = findMatchingTickers(query);
 
     if (matches.length === 0) {
       resultsEl.innerHTML = `<li class="ticker-no-results">No matching tickers</li>`;
+      statusEl.textContent = "no matching tickers"; // tells a screen reader user the list came up empty
+      highlightedIndex = -1;
       return;
     }
 
     resultsEl.innerHTML = matches
-      .map((t) =>
-        `<li class="ticker-result" data-symbol="${escapeHtml(t.symbol)}">` +
+      .map((t, index) =>
+        `<li class="ticker-result" id="ticker-option-${index}" role="option" data-symbol="${escapeHtml(t.symbol)}">` +
         `<span class="symbol">${escapeHtml(t.symbol)}</span>${escapeHtml(t.name)}</li>`
       )
       .join("");
+
+    statusEl.textContent = `${matches.length} matching ticker${matches.length === 1 ? "" : "s"} available`; // announces the new result count as you type
+
+    // highlights the top result by default, so pressing enter right away picks it without needing an arrow key first
+    setHighlightedResult(0);
+  }
+
+  // moves the keyboard highlight to the given index, wrapping around at
+  // either end so arrow keys never get stuck at the top or bottom
+  function setHighlightedResult(index) {
+    const resultsEl = document.getElementById("ticker-results");
+    const options = resultsEl.querySelectorAll(".ticker-result");
+    const input = document.getElementById("ticker-search-input");
+
+    if (options.length === 0) {
+      highlightedIndex = -1;
+      input.removeAttribute("aria-activedescendant");
+      return;
+    }
+
+    highlightedIndex = (index + options.length) % options.length;
+
+    options.forEach((option, i) => {
+      const isHighlighted = i === highlightedIndex;
+      option.classList.toggle("highlighted", isHighlighted);
+      option.setAttribute("aria-selected", String(isHighlighted));
+    });
+
+    const highlightedOption = options[highlightedIndex];
+    input.setAttribute("aria-activedescendant", highlightedOption.id); // tells screen readers which option is currently highlighted
+    highlightedOption.scrollIntoView({ block: "nearest" }); // keeps the highlighted option in view when the list scrolls
+  }
+
+  function selectHighlightedResult() {
+    const resultsEl = document.getElementById("ticker-results");
+    const options = resultsEl.querySelectorAll(".ticker-result");
+    const chosen = options[highlightedIndex] || options[0];
+
+    if (chosen && chosen.dataset.symbol) {
+      closeTickerPicker();
+      loadHistoryFor(chosen.dataset.symbol);
+    }
   }
 
   // Positions the picker so its top left corner lines up with the bottom
@@ -820,16 +905,25 @@
   function openTickerPicker() {
     const picker = document.getElementById("ticker-picker");
     const input = document.getElementById("ticker-search-input");
+    const trigger = document.getElementById("ticker-trigger");
 
     picker.hidden = false;
     positionTickerPicker(picker);
     input.value = "";
     renderTickerResults("");
+    input.setAttribute("aria-expanded", "true"); // matches the visible state so screen readers know the list is open
+    trigger?.setAttribute("aria-expanded", "true");
     input.focus();
   }
 
   function closeTickerPicker() {
+    const input = document.getElementById("ticker-search-input");
+    const trigger = document.getElementById("ticker-trigger");
+
     document.getElementById("ticker-picker").hidden = true;
+    input.setAttribute("aria-expanded", "false"); // matches the visible state so screen readers know the list is closed
+    input.removeAttribute("aria-activedescendant");
+    trigger?.setAttribute("aria-expanded", "false");
   }
 
   document.addEventListener("click", (event) => {
@@ -852,6 +946,31 @@
 
   document.getElementById("ticker-search-input").addEventListener("input", (event) => {
     renderTickerResults(event.target.value);
+  });
+
+  document.getElementById("ticker-search-input").addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault(); // stops the cursor from jumping to the end of the input text
+      setHighlightedResult(highlightedIndex + 1);
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault(); // stops the cursor from jumping to the start of the input text
+      setHighlightedResult(highlightedIndex - 1);
+      return;
+    }
+
+    if (event.key === "Enter") {
+      event.preventDefault(); // stops the page from doing anything unexpected on a bare enter press
+      selectHighlightedResult();
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeTickerPicker();
+      document.getElementById("ticker-trigger")?.focus(); // sends focus back to the button that opened the list, so keyboard users don't lose their place
+    }
   });
 
   // --- Orchestration -----------------------------------------------------
