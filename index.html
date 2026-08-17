@@ -363,7 +363,7 @@
           class="invest-amount-input"
           value="100,000"
         /> invested at <span id="invest-date">&mdash;</span>, it would now be worth
-        <strong class="invest-result" id="invest-result">&mdash;</strong>.
+        <strong class="invest-result" id="invest-result">&mdash;</strong><span id="invest-difference"></span>.
       </p>
     </section>
 
@@ -632,19 +632,24 @@
   function renderInvestmentSection(change, referenceIndex) {
     const dateEl = document.getElementById("invest-date");
     const resultEl = document.getElementById("invest-result");
+    const differenceEl = document.getElementById("invest-difference");
 
     if (!change) {
       dateEl.textContent = "—";
       resultEl.textContent = "—";
+      differenceEl.textContent = "";
       return;
     }
 
     const reference = history[referenceIndex];
     const amount = getInvestAmount();
     const resultValue = amount * (change.current / change.reference);
+    const gainOrLoss = resultValue - amount;
+    const direction = gainOrLoss >= 0 ? "more" : "less";
 
     dateEl.textContent = formatDisplayDate(reference.date);
     resultEl.textContent = formatCurrency(resultValue);
+    differenceEl.textContent = `, which is ${formatCurrency(Math.abs(gainOrLoss))} ${direction}`;
   }
 
   // --- Chart -----------------------------------------------------------
