@@ -51,7 +51,7 @@ jobs:
 
       - name: Commit updated data if it changed
         run: |
-          if git diff --quiet -- data/prices; then
+          if [ -z "$(git status --porcelain -- data/prices)" ]; then
             echo "No changes to commit."
             exit 0
           fi
