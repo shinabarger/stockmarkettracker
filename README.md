@@ -1,6 +1,6 @@
 # VTSAX Tracker
 
-https://shinabarger.github.io/vtsax-tracker/ is a one-click, dashboard for VTSAX (Vanguard Total Stock Market Index
+https://shinabarger.github.io/stockmarkettracker/ is a one-click, dashboard for VTSAX (Vanguard Total Stock Market Index
 Fund, Admiral Shares). Shows the current value and how it has updated since the
 start of the month, the start of the year, the past year, or however many
 years back you would like to examine.
