@@ -1448,10 +1448,6 @@
     "name": "American Public Education, Inc. - Common Stock"
   },
   {
-    "symbol": "APGE",
-    "name": "Apogee Therapeutics, Inc. - Common Stock"
-  },
-  {
     "symbol": "APH",
     "name": "Amphenol"
   },
@@ -1700,10 +1696,6 @@
     "name": "Arqit Quantum Inc. - Ordinary Shares"
   },
   {
-    "symbol": "ARQQW",
-    "name": "Arqit Quantum Inc. - Warrants"
-  },
-  {
     "symbol": "ARQT",
     "name": "Arcutis Biotherapeutics, Inc. - Common stock"
   },
@@ -1946,6 +1938,22 @@
   {
     "symbol": "ATLO",
     "name": "Ames National Corporation - Common Stock"
+  },
+  {
+    "symbol": "ATLQ",
+    "name": "JAB Acquisition Corp I - Class A Ordinary Shares"
+  },
+  {
+    "symbol": "ATLQR",
+    "name": "JAB Acquisition Corp I - Rights"
+  },
+  {
+    "symbol": "ATLQU",
+    "name": "JAB Acquisition Corp I - Units"
+  },
+  {
+    "symbol": "ATLQW",
+    "name": "JAB Acquisition Corp I - Warrants"
   },
   {
     "symbol": "ATLX",
@@ -2394,10 +2402,6 @@
   {
     "symbol": "BBYY",
     "name": "GraniteShares YieldBOOST BABA ETF"
-  },
-  {
-    "symbol": "BCAB",
-    "name": "BioAtla, Inc. - Common Stock"
   },
   {
     "symbol": "BCAL",
@@ -3598,10 +3602,6 @@
   {
     "symbol": "BTOC",
     "name": "Armlogi Holding Corp. - common stock"
-  },
-  {
-    "symbol": "BTOG",
-    "name": "Bit Origin Limited - Class A Ordinary Shares"
   },
   {
     "symbol": "BTQ",
@@ -5278,10 +5278,6 @@
   {
     "symbol": "CRNT",
     "name": "Ceragon Networks Ltd. - Ordinary Shares"
-  },
-  {
-    "symbol": "CRNX",
-    "name": "Crinetics Pharmaceuticals, Inc. - Common Stock"
   },
   {
     "symbol": "CROB",
@@ -8892,6 +8888,10 @@
     "name": "GigCapital9 Corp. - Class A Ordinary Share"
   },
   {
+    "symbol": "GIXI",
+    "name": "Gix Internet Ltd. - Ordinary Shares"
+  },
+  {
     "symbol": "GIXXR",
     "name": "GigCapital9 Corp. - Rights"
   },
@@ -9970,6 +9970,10 @@
   {
     "symbol": "HQ",
     "name": "Horizon Quantum Holdings Ltd. - Class A Ordinary Shares"
+  },
+  {
+    "symbol": "HQDG",
+    "name": "Raub Brock Dividend Growth ETF"
   },
   {
     "symbol": "HQGO",
@@ -11220,6 +11224,10 @@
     "name": "Intuitive Surgical"
   },
   {
+    "symbol": "ISRL",
+    "name": "Defiance KSM Israel 120 ETF"
+  },
+  {
     "symbol": "ISTB",
     "name": "iShares Core 1-5 Year USD Bond ETF"
   },
@@ -11352,22 +11360,6 @@
     "name": "Jacobs Solutions"
   },
   {
-    "symbol": "JAB",
-    "name": "JAB Acquisition Corp I - Class A Ordinary Shares"
-  },
-  {
-    "symbol": "JABRR",
-    "name": "JAB Acquisition Corp I - Rights"
-  },
-  {
-    "symbol": "JABRU",
-    "name": "JAB Acquisition Corp I - Units"
-  },
-  {
-    "symbol": "JABRW",
-    "name": "JAB Acquisition Corp I - Warrants"
-  },
-  {
     "symbol": "JACK",
     "name": "Jack In The Box Inc. - Common Stock"
   },
@@ -11464,10 +11456,6 @@
     "name": "J and Friends Holdings Limited - American Depositary Shares"
   },
   {
-    "symbol": "JFB",
-    "name": "JFB Construction Holdings - Class A Common Stock"
-  },
-  {
     "symbol": "JFIN",
     "name": "Jiayin Group Inc. - American Depositary Shares"
   },
@@ -11522,6 +11510,14 @@
   {
     "symbol": "JNJ",
     "name": "Johnson & Johnson"
+  },
+  {
+    "symbol": "JONE",
+    "name": "Jones Ventures INTL Acquisition1 Corp - Class A Ordinary Shares"
+  },
+  {
+    "symbol": "JONER",
+    "name": "Jones Ventures INTL Acquisition1 Corp - Rights"
   },
   {
     "symbol": "JONEU",
@@ -13033,7 +13029,7 @@
   },
   {
     "symbol": "MBAI",
-    "name": "Check-Cap Ltd. - Ordinary Share"
+    "name": "MBody AI Ltd. - Ordinary Share"
   },
   {
     "symbol": "MBB",
@@ -14400,10 +14396,6 @@
     "name": "Nocera, Inc. - common stock"
   },
   {
-    "symbol": "NCSM",
-    "name": "NCS Multistage Holdings, Inc. - Common Stock"
-  },
-  {
     "symbol": "NCT",
     "name": "Intercont (Cayman) Limited - Class A Ordinary shares"
   },
@@ -14602,10 +14594,6 @@
   {
     "symbol": "NHP",
     "name": "National Healthcare Properties, Inc. - Class A Common Stock"
-  },
-  {
-    "symbol": "NHPAP",
-    "name": "National Healthcare Properties, Inc. - 7.375% Series A Cumulative Redeemable Perpetual Preferred Stock"
   },
   {
     "symbol": "NHPBP",
@@ -14856,8 +14844,20 @@
     "name": "NRX Pharmaceuticals, Inc. - Common Stock"
   },
   {
+    "symbol": "NSAI",
+    "name": "NorthStrive Acquisition Corp I. - Class A Ordinary Shares"
+  },
+  {
+    "symbol": "NSAIR",
+    "name": "NorthStrive Acquisition Corp I. - Rights"
+  },
+  {
     "symbol": "NSAIU",
     "name": "NorthStrive Acquisition Corp I. - Units"
+  },
+  {
+    "symbol": "NSAIW",
+    "name": "NorthStrive Acquisition Corp I. - Warrants"
   },
   {
     "symbol": "NSC",
@@ -15566,6 +15566,10 @@
   {
     "symbol": "ONMDW",
     "name": "OneMedNet Corp - Warrant"
+  },
+  {
+    "symbol": "OPAD",
+    "name": "Offerpad Solutions Inc.  - Class A Common Stock"
   },
   {
     "symbol": "OPAL",
@@ -17768,10 +17772,6 @@
     "name": "Rocket Pharmaceuticals, Inc. - Common Stock"
   },
   {
-    "symbol": "RCKTW",
-    "name": "Rocket Pharmaceuticals, Inc. - Warrant"
-  },
-  {
     "symbol": "RCKY",
     "name": "Rocky Brands, Inc. - Common Stock"
   },
@@ -18992,6 +18992,10 @@
     "name": "Sight Sciences, Inc. - Common Stock"
   },
   {
+    "symbol": "SGLD",
+    "name": "Scorpio Gold Corporation - Common Stock"
+  },
+  {
     "symbol": "SGLY",
     "name": "Singularity Future Technology Ltd. - Common Stock"
   },
@@ -19006,6 +19010,10 @@
   {
     "symbol": "SGP",
     "name": "SpyGlass Pharma, Inc. - Common Stock"
+  },
+  {
+    "symbol": "SGRX",
+    "name": "SANGRIX INC. - Class A Ordinary Shares"
   },
   {
     "symbol": "SGRY",
@@ -20189,7 +20197,7 @@
   },
   {
     "symbol": "SVRN",
-    "name": "OceanPal Inc. - Common Stock"
+    "name": "SVRN, Inc. - Common Stock"
   },
   {
     "symbol": "SW",
@@ -20788,6 +20796,10 @@
     "name": "GraniteShares Autocallable TSLA ETF"
   },
   {
+    "symbol": "TLACU",
+    "name": "Three Lions Acquisition Corp. - Units"
+  },
+  {
     "symbol": "TLF",
     "name": "Tandy Leather Factory, Inc. - common stock"
   },
@@ -21038,6 +21050,10 @@
   {
     "symbol": "TRBF",
     "name": "Angel Oak Total Return ETF"
+  },
+  {
+    "symbol": "TRBG",
+    "name": "TurboGen Ltd. - Ordinary Shares"
   },
   {
     "symbol": "TRDA",
@@ -23404,6 +23420,10 @@
     "name": "Yueda Digital Holding - Class A Ordinary Share"
   },
   {
+    "symbol": "YFOR",
+    "name": "YYForce Inc. - Class A Ordinary Shares"
+  },
+  {
     "symbol": "YHC",
     "name": "LQR House Inc. - Common Stock"
   },
@@ -23522,10 +23542,6 @@
   {
     "symbol": "YYAI",
     "name": "AiRWA Inc. - Common Stock"
-  },
-  {
-    "symbol": "YYGH",
-    "name": "YY Group Holding Limited - Class A Ordinary Shares"
   },
   {
     "symbol": "Z",
@@ -23654,10 +23670,6 @@
   {
     "symbol": "ZSTK",
     "name": "ZeroStack Corp. - Common Stock"
-  },
-  {
-    "symbol": "ZTEK",
-    "name": "Zentek Ltd. - common stock"
   },
   {
     "symbol": "ZTEN",
