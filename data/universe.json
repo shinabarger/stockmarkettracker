@@ -212,6 +212,14 @@
     "name": "Aurora Cannabis Inc. - Common Shares"
   },
   {
+    "symbol": "ACBE",
+    "name": "Pacer Metaurus Enhanced Core Income Autocallable ETF"
+  },
+  {
+    "symbol": "ACBH",
+    "name": "Pacer Metaurus High Income Autocallable ETF"
+  },
+  {
     "symbol": "ACCL",
     "name": "Acco Group Holdings Limited - Class A Ordinary Shares"
   },
@@ -760,6 +768,10 @@
     "name": "Firefly Neuroscience, Inc.  - Common Stock"
   },
   {
+    "symbol": "AIFR",
+    "name": "Defiance Global Foundries ETF"
+  },
+  {
     "symbol": "AIFU",
     "name": "AIFU Inc. - Class A Ordinary Share"
   },
@@ -786,6 +798,10 @@
   {
     "symbol": "AIMDW",
     "name": "Ainos, Inc. - warrants"
+  },
+  {
+    "symbol": "AIMG",
+    "name": "Defiance AI Magnificent 10 ETF"
   },
   {
     "symbol": "AIMS",
@@ -1065,7 +1081,7 @@
   },
   {
     "symbol": "ALP",
-    "name": "Alpha Compute Corp  - Common Stock"
+    "name": "Alpha Compute Corp  - Ordinary Shares"
   },
   {
     "symbol": "ALPS",
@@ -1132,8 +1148,16 @@
     "name": "Defiance Daily Target 2X Long AMAT ETF"
   },
   {
+    "symbol": "AMAC",
+    "name": "AMR Resources Acquisition Corp - Class A Ordinary Shares"
+  },
+  {
     "symbol": "AMACU",
     "name": "AMR Resources Acquisition Corp - Units"
+  },
+  {
+    "symbol": "AMACW",
+    "name": "AMR Resources Acquisition Corp - Warrants"
   },
   {
     "symbol": "AMAL",
@@ -1749,11 +1773,11 @@
   },
   {
     "symbol": "ASBP",
-    "name": "Aspire Biopharma Holdings, Inc.  - Common Stock"
+    "name": "Aspire-Lakewood Holdings, Inc. - Common Stock"
   },
   {
     "symbol": "ASBPW",
-    "name": "Aspire Biopharma Holdings, Inc.  - Warrant"
+    "name": "Aspire-Lakewood Holdings, Inc. - Warrant"
   },
   {
     "symbol": "ASCI",
@@ -1994,6 +2018,10 @@
   {
     "symbol": "ATTO",
     "name": "Attovia Therapeutics, Inc. - Common Stock"
+  },
+  {
+    "symbol": "ATTT",
+    "name": "Atlas Trinity Tech Limited - Ordinary Shares"
   },
   {
     "symbol": "ATXG",
@@ -3308,10 +3336,6 @@
     "name": "Brilliant Earth Group, Inc. - Class A Common Stock"
   },
   {
-    "symbol": "BRNS",
-    "name": "Barinthus Biotherapeutics plc - American Depositary Shares"
-  },
-  {
     "symbol": "BRNX",
     "name": "BrenX Ltd. - Ordinary Shares"
   },
@@ -3336,8 +3360,16 @@
     "name": "ProCap Financial, Inc. - Warrant."
   },
   {
+    "symbol": "BRTM",
+    "name": "B&R Technology Merger Corp. - Class A Ordinary Shares"
+  },
+  {
     "symbol": "BRTMU",
     "name": "B&R Technology Merger Corp. - Units"
+  },
+  {
+    "symbol": "BRTMW",
+    "name": "B&R Technology Merger Corp. - Warrants"
   },
   {
     "symbol": "BRTR",
@@ -3550,10 +3582,6 @@
   {
     "symbol": "BSY",
     "name": "Bentley Systems, Incorporated - Class B Common Stock"
-  },
-  {
-    "symbol": "BTAI",
-    "name": "BioXcel Therapeutics, Inc. - Common Stock"
   },
   {
     "symbol": "BTBD",
@@ -4108,6 +4136,10 @@
     "name": "CareCloud, Inc. - Common Stock"
   },
   {
+    "symbol": "CCML",
+    "name": "Roundhill MLCC & Electronic Components ETF"
+  },
+  {
     "symbol": "CCNE",
     "name": "CNB Financial Corporation - Common Stock"
   },
@@ -4410,6 +4442,10 @@
   {
     "symbol": "CHA",
     "name": "Chagee Holdings Limited - American Depositary Shares, each representing 1 Class A ordinary share"
+  },
+  {
+    "symbol": "CHAD",
+    "name": "DeFi Development Corp. - Variable Rate Series C Perpetual Preferred Stock"
   },
   {
     "symbol": "CHAI",
@@ -5160,6 +5196,10 @@
     "name": "CRA International,Inc. - Common Stock"
   },
   {
+    "symbol": "CRAM",
+    "name": "Defiance China Memory ETF"
+  },
+  {
     "symbol": "CRAN",
     "name": "Crane Harbor Acquisition Corp. II - Class A Ordinary Shares"
   },
@@ -5618,10 +5658,6 @@
   {
     "symbol": "CYAB",
     "name": "Cyabra, Inc. - Common Stock"
-  },
-  {
-    "symbol": "CYCN",
-    "name": "Cyclerion Therapeutics, Inc. - Common Stock"
   },
   {
     "symbol": "CYCU",
@@ -6898,6 +6934,10 @@
   {
     "symbol": "ENZL",
     "name": "iShares MSCI New Zealand ETF"
+  },
+  {
+    "symbol": "EOCN",
+    "name": "Eocene Ltd. - Ordinary Shares"
   },
   {
     "symbol": "EOG",
@@ -8700,6 +8740,10 @@
     "name": "Gemini Space Station, Inc. - Class A Common Stock"
   },
   {
+    "symbol": "GEMQ",
+    "name": "Goldman Sachs Data Enhanced Emerging Markets Equity ETF"
+  },
+  {
     "symbol": "GEN",
     "name": "Gen Digital"
   },
@@ -8860,10 +8904,6 @@
     "name": "Generation Income Properties Inc. - Common stock"
   },
   {
-    "symbol": "GIPRW",
-    "name": "Generation Income Properties Inc. - Warrant"
-  },
-  {
     "symbol": "GIS",
     "name": "General Mills"
   },
@@ -8946,10 +8986,6 @@
   {
     "symbol": "GLIBK",
     "name": "Liberty Capital Corporation - Series C GCI Group Common Stock"
-  },
-  {
-    "symbol": "GLMD",
-    "name": "Galmed Pharmaceuticals Ltd. - Ordinary Shares"
   },
   {
     "symbol": "GLND",
@@ -11992,6 +12028,10 @@
     "name": "Korro Bio, Inc. - Common Stock"
   },
   {
+    "symbol": "KRSA",
+    "name": "Korsana Biosciences, Inc. - Common Stock"
+  },
+  {
     "symbol": "KRT",
     "name": "Karat Packaging Inc. - Common Stock"
   },
@@ -12058,14 +12098,6 @@
   {
     "symbol": "KVUE",
     "name": "Kenvue"
-  },
-  {
-    "symbol": "KWM",
-    "name": "K Wave Media, Ltd. - Ordinary Shares"
-  },
-  {
-    "symbol": "KWMWW",
-    "name": "K Wave Media, Ltd. - Warrant"
   },
   {
     "symbol": "KXIN",
@@ -12694,10 +12726,6 @@
   {
     "symbol": "LPLA",
     "name": "LPL Financial Holdings Inc. - Common Stock"
-  },
-  {
-    "symbol": "LPSN",
-    "name": "LivePerson, Inc. - Common Stock"
   },
   {
     "symbol": "LPTH",
@@ -15144,6 +15172,14 @@
     "name": "Newton Golf Company, Inc. - Common Stock"
   },
   {
+    "symbol": "NXAT",
+    "name": "Nexus Advanced Technologies Inc. - Ordinary Shares"
+  },
+  {
+    "symbol": "NXATW",
+    "name": "Nexus Advanced Technologies Inc. - Warrant"
+  },
+  {
     "symbol": "NXGL",
     "name": "NexGel, Inc - Common Stock"
   },
@@ -15296,8 +15332,20 @@
     "name": "Ocugen, Inc. - Common Stock"
   },
   {
+    "symbol": "OCLT",
+    "name": "OceanLight Acquisition Corporation - Ordinary Shares"
+  },
+  {
+    "symbol": "OCLTR",
+    "name": "OceanLight Acquisition Corporation - Rights"
+  },
+  {
     "symbol": "OCLTU",
     "name": "OceanLight Acquisition Corporation - Units"
+  },
+  {
+    "symbol": "OCLTW",
+    "name": "OceanLight Acquisition Corporation - Warrants"
   },
   {
     "symbol": "OCS",
@@ -16633,7 +16681,7 @@
   },
   {
     "symbol": "PMA",
-    "name": "Ming Shing Group Holdings Limited - Ordinary Shares"
+    "name": "PMA Graphene Technology Group Inc. - Class A Ordinary Shares"
   },
   {
     "symbol": "PMAX",
@@ -17716,10 +17764,6 @@
     "name": "Rave Restaurant Group, Inc. - Common Stock"
   },
   {
-    "symbol": "RAY",
-    "name": "Raytech Holding Limited - Ordinary Shares"
-  },
-  {
     "symbol": "RAYA",
     "name": "Erayak Power Solution Group Inc. - Class A Ordinary Shares"
   },
@@ -18214,6 +18258,10 @@
   {
     "symbol": "RMIX",
     "name": "Suncrete, Inc. - Class A Common Stock"
+  },
+  {
+    "symbol": "RML",
+    "name": "Resolution Minerals Ltd - American Depositary Shares"
   },
   {
     "symbol": "RMNI",
@@ -20240,6 +20288,10 @@
     "name": "SWP Growth & Income ETF"
   },
   {
+    "symbol": "SWRD",
+    "name": "Stewards Inc - Common Stock"
+  },
+  {
     "symbol": "SWVL",
     "name": "Swvl Holdings Corp - Ordinary Shares"
   },
@@ -20874,10 +20926,6 @@
   {
     "symbol": "TMCR",
     "name": "The Metals Royalty Company Inc. - Common Stock"
-  },
-  {
-    "symbol": "TMCWW",
-    "name": "TMC the metals company Inc. - Warrant"
   },
   {
     "symbol": "TMDX",
@@ -22070,6 +22118,10 @@
   {
     "symbol": "VEEE",
     "name": "Twin Vee PowerCats Co. - Common Stock"
+  },
+  {
+    "symbol": "VEEM",
+    "name": "VanEck MSCI EM Analyst Sentiment ETF"
   },
   {
     "symbol": "VEEV",
