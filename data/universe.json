@@ -460,6 +460,10 @@
     "name": "Adaptive Biotechnologies Corporation - Common Stock"
   },
   {
+    "symbol": "ADRX",
+    "name": "ADARx Pharmaceuticals, Inc. - Common stock"
+  },
+  {
     "symbol": "ADSE",
     "name": "ADS-TEC ENERGY PLC - Ordinary Shares"
   },
@@ -2564,6 +2568,10 @@
     "name": "iShares Dynamic Equity Active ETF"
   },
   {
+    "symbol": "BE",
+    "name": "Bloom Energy"
+  },
+  {
     "symbol": "BEAG",
     "name": "Bold Eagle Acquisition Corp. - Class A Ordinary Shares"
   },
@@ -2946,10 +2954,6 @@
   {
     "symbol": "BLDP",
     "name": "Ballard Power Systems, Inc. - Common Shares"
-  },
-  {
-    "symbol": "BLDR",
-    "name": "Builders FirstSource"
   },
   {
     "symbol": "BLFS",
@@ -3352,16 +3356,12 @@
     "name": "Brown & Brown"
   },
   {
-    "symbol": "BRR",
-    "name": "ProCap Financial, Inc. - Common Stock"
+    "symbol": "BRRKU",
+    "name": "Bluerock Acquisition Corp. II - Units"
   },
   {
     "symbol": "BRRR",
     "name": "Coinshares Bitcoin ETF"
-  },
-  {
-    "symbol": "BRRWW",
-    "name": "ProCap Financial, Inc. - Warrant."
   },
   {
     "symbol": "BRTM",
@@ -4522,6 +4522,10 @@
   {
     "symbol": "CHI",
     "name": "Calamos Convertible Opportunities and Income Fund - Closed End Fund"
+  },
+  {
+    "symbol": "CHIP",
+    "name": "REX AI Chipmaking ETF"
   },
   {
     "symbol": "CHKP",
@@ -6160,10 +6164,6 @@
     "name": "Dominari Holdings Inc. - Common Stock"
   },
   {
-    "symbol": "DOMO",
-    "name": "Domo, Inc. - Class B Common Stock"
-  },
-  {
     "symbol": "DOO",
     "name": "BRP Inc. - Common Subordinate Voting Shares"
   },
@@ -7108,6 +7108,10 @@
     "name": "Establishment Labs Holdings Inc. - Common Shares"
   },
   {
+    "symbol": "ESYN",
+    "name": "EnerSyn Global Inc. - Common Stock"
+  },
+  {
     "symbol": "ETEC",
     "name": "iShares Breakthrough Environmental Solutions ETF"
   },
@@ -7900,8 +7904,20 @@
     "name": "National Beverage Corp. - Common Stock"
   },
   {
+    "symbol": "FJDI",
+    "name": "ARC Group Securities Acquisition I - Class A Ordinary Shares"
+  },
+  {
+    "symbol": "FJDIR",
+    "name": "ARC Group Securities Acquisition I - Rights"
+  },
+  {
     "symbol": "FJDIU",
     "name": "ARC Group Securities Acquisition I - Units"
+  },
+  {
+    "symbol": "FJDIW",
+    "name": "ARC Group Securities Acquisition I - Warrants"
   },
   {
     "symbol": "FJP",
@@ -10164,6 +10180,10 @@
     "name": "Hub Group, Inc. - Class A Common Stock"
   },
   {
+    "symbol": "HUCK",
+    "name": "Huckleberry.ai, Inc. - Class B Common Stock"
+  },
+  {
     "symbol": "HUDI",
     "name": "Huadi International Group Co., Ltd. - Ordinary Shares"
   },
@@ -10204,18 +10224,6 @@
     "name": "Leverage Shares 2X Long HUT Daily ETF"
   },
   {
-    "symbol": "HVII",
-    "name": "Hennessy Capital Investment Corp. VII - Ordinary Shares"
-  },
-  {
-    "symbol": "HVIIR",
-    "name": "Hennessy Capital Investment Corp. VII - Rights"
-  },
-  {
-    "symbol": "HVIIU",
-    "name": "Hennessy Capital Investment Corp. VII - Unit"
-  },
-  {
     "symbol": "HVMC",
     "name": "Highview Merger Corp. - Class A Ordinary Share"
   },
@@ -10244,10 +10252,6 @@
     "name": "Hotchkis & Wiley Global Value Fund"
   },
   {
-    "symbol": "HWH",
-    "name": "HWH International Inc. - Common Stock"
-  },
-  {
     "symbol": "HWIV",
     "name": "Hotchkis & Wiley International Value Fund"
   },
@@ -10258,6 +10262,10 @@
   {
     "symbol": "HWM",
     "name": "Howmet Aerospace"
+  },
+  {
+    "symbol": "HWMV",
+    "name": "Hotchkis & Wiley Mid-Cap Value Fund"
   },
   {
     "symbol": "HWO",
@@ -10725,7 +10733,7 @@
   },
   {
     "symbol": "ILMN",
-    "name": "Illumina, Inc. - Common Stock"
+    "name": "Illumina, Inc."
   },
   {
     "symbol": "ILPT",
@@ -11009,7 +11017,7 @@
   },
   {
     "symbol": "INVE",
-    "name": "Identiv, Inc. - Common Stock"
+    "name": "INVE Technologies, Inc. - Common Stock"
   },
   {
     "symbol": "INVH",
@@ -11640,10 +11648,6 @@
     "name": "Jasper Therapeutics, Inc. - Class A Common Stock"
   },
   {
-    "symbol": "JSPRW",
-    "name": "Jasper Therapeutics, Inc. - Warrant"
-  },
-  {
     "symbol": "JTAI",
     "name": "Jet.AI Inc. - Common Stock"
   },
@@ -11918,10 +11922,6 @@
   {
     "symbol": "KLXE",
     "name": "KLX Energy Services Holdings, Inc.  - Common Stock"
-  },
-  {
-    "symbol": "KLXER",
-    "name": "KLX Energy Services Holdings, Inc.  - Rights"
   },
   {
     "symbol": "KMB",
@@ -12412,10 +12412,6 @@
     "name": "Lifeward Ltd. - Ordinary Shares"
   },
   {
-    "symbol": "LGCF",
-    "name": "Themes US Cash Flow Champions ETF"
-  },
-  {
     "symbol": "LGCL",
     "name": "Lucas GC Limited - Class A Ordinary Shares"
   },
@@ -12706,6 +12702,10 @@
   {
     "symbol": "LOVE",
     "name": "The Lovesac Company - Common Stock"
+  },
+  {
+    "symbol": "LOVIU",
+    "name": "Live Oak Acquisition Corp. VI - Units"
   },
   {
     "symbol": "LOW",
@@ -14188,6 +14188,10 @@
     "name": "State Street My2035 Corporate Bond ETF"
   },
   {
+    "symbol": "MYCP",
+    "name": "State Street My2036 Corporate Bond ETF"
+  },
+  {
     "symbol": "MYFW",
     "name": "First Western Financial, Inc. - Common Stock"
   },
@@ -14216,6 +14220,10 @@
     "name": "State Street My2031 High Yield Corporate Bond ETF"
   },
   {
+    "symbol": "MYHF",
+    "name": "State Street My2032 High Yield Corporate Bond ETF"
+  },
+  {
     "symbol": "MYMF",
     "name": "State Street My2026 Municipal Bond ETF"
   },
@@ -14238,6 +14246,10 @@
   {
     "symbol": "MYMK",
     "name": "State Street My2031 Municipal Bond ETF"
+  },
+  {
+    "symbol": "MYML",
+    "name": "State Street My2032 Municipal Bond ETF"
   },
   {
     "symbol": "MYPS",
@@ -14634,18 +14646,6 @@
   {
     "symbol": "NGNE",
     "name": "Neurogene Inc. - Common Stock"
-  },
-  {
-    "symbol": "NHIC",
-    "name": "NewHold Investment Corp III - Class A Ordinary shares"
-  },
-  {
-    "symbol": "NHICU",
-    "name": "NewHold Investment Corp III - Units"
-  },
-  {
-    "symbol": "NHICW",
-    "name": "NewHold Investment Corp III - Warrants"
   },
   {
     "symbol": "NHIV",
@@ -15184,6 +15184,14 @@
     "name": "Northwest Bancshares, Inc. - Common Stock"
   },
   {
+    "symbol": "NWCL",
+    "name": "newcleo plc - Ordinary Shares"
+  },
+  {
+    "symbol": "NWCLW",
+    "name": "newcleo plc - Warrants"
+  },
+  {
     "symbol": "NWE",
     "name": "NorthWestern Energy Group, Inc.  - Common Stock"
   },
@@ -15640,6 +15648,10 @@
     "name": "OneConstruction Group Limited - Ordinary Shares"
   },
   {
+    "symbol": "ONEN",
+    "name": "ONE Nuclear Energy Inc. - Common Stock"
+  },
+  {
     "symbol": "ONEQ",
     "name": "Fidelity Nasdaq Composite Index ETF"
   },
@@ -15996,6 +16008,10 @@
     "name": "Bank OZK - 4.625% Series A Non-Cumulative Perpetual Preferred Stock"
   },
   {
+    "symbol": "P",
+    "name": "Everpure"
+  },
+  {
     "symbol": "PAA",
     "name": "Plains All American Pipeline, L.P. - Common Units representing Limited Partner Interests"
   },
@@ -16148,6 +16164,10 @@
     "name": "Private Bancorp of America, Inc. - Common Stock"
   },
   {
+    "symbol": "PBCS",
+    "name": "Portfolio Building Block World Consumer Staples ETF"
+  },
+  {
     "symbol": "PBEU",
     "name": "Portfolio Building Block European Banks Index ETF"
   },
@@ -16194,6 +16214,14 @@
   {
     "symbol": "PBSC",
     "name": "Pacer Barings Secured Credit Flex ETF"
+  },
+  {
+    "symbol": "PBUB",
+    "name": "Portfolio Building Block US Banks ETF"
+  },
+  {
+    "symbol": "PBWN",
+    "name": "Portfolio Building Block World Ex US Industrials ETF"
   },
   {
     "symbol": "PBYI",
@@ -16678,10 +16706,6 @@
   {
     "symbol": "PLTR",
     "name": "Palantir Technologies"
-  },
-  {
-    "symbol": "PLTS",
-    "name": "Platinum Analytics Cayman Limited - Class A Ordinary Shares"
   },
   {
     "symbol": "PLTU",
@@ -17544,6 +17568,10 @@
     "name": "Invesco QQQ Hedged Advantage ETF"
   },
   {
+    "symbol": "QQI",
+    "name": "Invesco Nasdaq International Innovators 100 ETF"
+  },
+  {
     "symbol": "QQLV",
     "name": "Invesco QQQ Low Volatility ETF"
   },
@@ -17558,6 +17586,10 @@
   {
     "symbol": "QQQA",
     "name": "ProShares Nasdaq-100 Dorsey Wright Momentum ETF"
+  },
+  {
+    "symbol": "QQQB",
+    "name": "VistaShares Shield Nasdaq 100 Enhanced Protection ETF"
   },
   {
     "symbol": "QQQE",
@@ -19460,10 +19492,6 @@
     "name": "Southern Missouri Bancorp, Inc. - Common Stock"
   },
   {
-    "symbol": "SMCF",
-    "name": "Themes US Small Cap Cash Flow Champions ETF"
-  },
-  {
     "symbol": "SMCI",
     "name": "Supermicro"
   },
@@ -20256,6 +20284,14 @@
     "name": "Silvaco Group, Inc. - Common Stock"
   },
   {
+    "symbol": "SVIA",
+    "name": "Silvia, Inc. - Common Stock"
+  },
+  {
+    "symbol": "SVIAW",
+    "name": "Silvia, Inc. - Warrant."
+  },
+  {
     "symbol": "SVIV",
     "name": "Spring Valley Acquisition Corp. IV - Class A Ordinary Shares"
   },
@@ -20448,10 +20484,6 @@
     "name": "Thornburg American Opportunities Fund"
   },
   {
-    "symbol": "TAP",
-    "name": "Molson Coors Beverage Company"
-  },
-  {
     "symbol": "TARA",
     "name": "Protara Therapeutics, Inc.  - Common Stock"
   },
@@ -20530,10 +20562,6 @@
   {
     "symbol": "TBLD",
     "name": "Thornburg Income Builder Opportunities Trust - Closed End Fund"
-  },
-  {
-    "symbol": "TBPH",
-    "name": "Theravance Biopharma, Inc. - Ordinary Shares"
   },
   {
     "symbol": "TC",
@@ -21088,6 +21116,10 @@
     "name": "TOP Financial Group Limited - Class A Ordinary Shares"
   },
   {
+    "symbol": "TORK",
+    "name": "KraneShares Actuator ETF"
+  },
+  {
     "symbol": "TORO",
     "name": "Toro Corp. - Common stock"
   },
@@ -21421,7 +21453,7 @@
   },
   {
     "symbol": "TTD",
-    "name": "Trade Desk (The)"
+    "name": "The Trade Desk, Inc. - Class A Common Stock"
   },
   {
     "symbol": "TTEC",
@@ -21564,6 +21596,10 @@
     "name": "Twist Bioscience Corporation - Common Stock"
   },
   {
+    "symbol": "TXCA",
+    "name": "Northern Trust California Intermediate Tax-Exempt Bond ETF"
+  },
+  {
     "symbol": "TXG",
     "name": "10x Genomics, Inc. - Common Stock"
   },
@@ -21574,6 +21610,10 @@
   {
     "symbol": "TXN",
     "name": "Texas Instruments"
+  },
+  {
+    "symbol": "TXNY",
+    "name": "Northern Trust New York Intermediate Tax-Exempt Bond ETF"
   },
   {
     "symbol": "TXRH",
@@ -22400,8 +22440,16 @@
     "name": "Versamet Royalties Corporation - Common Stock"
   },
   {
+    "symbol": "VMHY",
+    "name": "VictoryShares Municipal High Yield ETF"
+  },
+  {
     "symbol": "VMRK",
     "name": "Vivmark Residential"
+  },
+  {
+    "symbol": "VMSD",
+    "name": "VictoryShares Short-Duration Municipal ETF"
   },
   {
     "symbol": "VNCE",
@@ -22458,6 +22506,10 @@
   {
     "symbol": "VONV",
     "name": "Vanguard Russell 1000 Value ETF"
+  },
+  {
+    "symbol": "VOOB",
+    "name": "VistaShares Shield S&P 500 Enhanced Protection ETF"
   },
   {
     "symbol": "VOR",
