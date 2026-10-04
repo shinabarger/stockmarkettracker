@@ -224,6 +224,10 @@
     "name": "Acco Group Holdings Limited - Class A Ordinary Shares"
   },
   {
+    "symbol": "ACCV",
+    "name": "Accelevation Holdings Corp. - Class A ordinary shares"
+  },
+  {
     "symbol": "ACDC",
     "name": "ProFrac Holding Corp. - Class A Common Stock"
   },
@@ -898,10 +902,6 @@
   {
     "symbol": "AIX",
     "name": "Defiance US 100 Tech AI Moat ETF"
-  },
-  {
-    "symbol": "AIXC",
-    "name": "AIxCrypto Holdings, Inc. - Common Stock"
   },
   {
     "symbol": "AIXI",
@@ -3105,15 +3105,15 @@
   },
   {
     "symbol": "BNC",
-    "name": "CEA Industries Inc. - Common Stock"
+    "name": "BNB Standard Corporation - Common Stock"
   },
   {
     "symbol": "BNCWW",
-    "name": "CEA Industries Inc. - Warrant"
+    "name": "BNB Standard Corporation - Warrant"
   },
   {
     "symbol": "BNCWZ",
-    "name": "CEA Industries Inc. - Warrants"
+    "name": "BNB Standard Corporation - Warrants"
   },
   {
     "symbol": "BND",
@@ -4620,6 +4620,10 @@
     "name": "Calamos Global Dynamic Income Fund - Closed End Fund"
   },
   {
+    "symbol": "CHWM",
+    "name": "Chilwa Minerals Limited - American Depository Shares"
+  },
+  {
     "symbol": "CHY",
     "name": "Calamos Convertible and High Income Fund - Closed End Fund"
   },
@@ -5014,18 +5018,6 @@
   {
     "symbol": "COKE",
     "name": "Coca-Cola Consolidated, Inc. - Common Stock"
-  },
-  {
-    "symbol": "COLA",
-    "name": "Columbus Acquisition Corp - Ordinary Shares"
-  },
-  {
-    "symbol": "COLAR",
-    "name": "Columbus Acquisition Corp - Rights"
-  },
-  {
-    "symbol": "COLAU",
-    "name": "Columbus Acquisition Corp - Unit"
   },
   {
     "symbol": "COLB",
@@ -6896,6 +6888,10 @@
     "name": "Energys Group Limited - Ordinary Shares"
   },
   {
+    "symbol": "ENHE",
+    "name": "iShares Enhanced Emerging Markets Active ETF"
+  },
+  {
     "symbol": "ENHI",
     "name": "iShares Enhanced International Active ETF"
   },
@@ -7740,6 +7736,10 @@
     "name": "F5, Inc."
   },
   {
+    "symbol": "FFR",
+    "name": "FF EAI Robotics Ecosystem Inc. - Common Stock"
+  },
+  {
     "symbol": "FFUT",
     "name": "Fidelity Managed Futures ETF"
   },
@@ -7750,6 +7750,14 @@
   {
     "symbol": "FGBIP",
     "name": "First Guaranty Bancshares, Inc. - 6.75% Series A Fixed-Rate Non-Cumulative Perpetual Preferred Stock"
+  },
+  {
+    "symbol": "FGC",
+    "name": "FG Communities Holdings Inc. - Common Stock"
+  },
+  {
+    "symbol": "FGCPP",
+    "name": "FG Communities Holdings Inc. - 8.00% Cumulative Series A Preferred Stock"
   },
   {
     "symbol": "FGI",
@@ -7778,14 +7786,6 @@
   {
     "symbol": "FGM",
     "name": "First Trust Germany AlphaDEX Fund"
-  },
-  {
-    "symbol": "FGNX",
-    "name": "FG Nexus Inc. - Common Stock"
-  },
-  {
-    "symbol": "FGNXP",
-    "name": "FG Nexus Inc. - 8.00% Cumulative Series A Preferred Stock"
   },
   {
     "symbol": "FGSI",
@@ -8258,10 +8258,6 @@
   {
     "symbol": "FSCS",
     "name": "First Trust SMID Capital Strength ETF"
-  },
-  {
-    "symbol": "FSEA",
-    "name": "First Seacoast Bancorp, Inc. - Common Stock"
   },
   {
     "symbol": "FSGS",
@@ -8832,10 +8828,6 @@
     "name": "Guardforce AI Co., Limited - Ordinary Shares"
   },
   {
-    "symbol": "GFAIW",
-    "name": "Guardforce AI Co., Limited - Warrant"
-  },
-  {
     "symbol": "GFGF",
     "name": "Guru Favorite Stocks ETF"
   },
@@ -9190,6 +9182,10 @@
   {
     "symbol": "GOVX",
     "name": "GeoVax Labs, Inc. - Common Stock"
+  },
+  {
+    "symbol": "GOW",
+    "name": "GOWell Energy Technology - Ordinary shares"
   },
   {
     "symbol": "GP",
@@ -9777,7 +9773,7 @@
   },
   {
     "symbol": "HELP",
-    "name": "Cybin Inc. - Common Stock"
+    "name": "Helus Pharma Inc.  - Common Stock"
   },
   {
     "symbol": "HEPS",
@@ -10532,6 +10528,10 @@
     "name": "Investcorp Credit Management BDC, Inc. - Common Stock"
   },
   {
+    "symbol": "ICMO",
+    "name": "Symmetry Panoramic International Country Momentum ETF"
+  },
+  {
     "symbol": "ICON",
     "name": "Icon Energy Corp. - Common stock"
   },
@@ -11078,18 +11078,6 @@
   {
     "symbol": "IPDN",
     "name": "Professional Diversity Network, Inc. - Common Stock"
-  },
-  {
-    "symbol": "IPEX",
-    "name": "Inflection Point Acquisition Corp. - Class A Ordinary Shares"
-  },
-  {
-    "symbol": "IPEXR",
-    "name": "Inflection Point Acquisition Corp. - Right"
-  },
-  {
-    "symbol": "IPEXU",
-    "name": "Inflection Point Acquisition Corp. - Unit"
   },
   {
     "symbol": "IPFX",
@@ -13652,6 +13640,10 @@
     "name": "MiniMed Group, Inc. - Common Stock"
   },
   {
+    "symbol": "MMEDV",
+    "name": "MiniMed Group, Inc. - Common Stock When Issued"
+  },
+  {
     "symbol": "MMLP",
     "name": "Martin Midstream Partners L.P. - Common Units Representing Limited Partnership Interests"
   },
@@ -14094,6 +14086,10 @@
   {
     "symbol": "MUU",
     "name": "Direxion Daily MU Bull 2X ETF"
+  },
+  {
+    "symbol": "MUY",
+    "name": "YieldMax MU Option Income Strategy ETF"
   },
   {
     "symbol": "MUYY",
@@ -14956,10 +14952,6 @@
     "name": "NAPCO Security Technologies, Inc. - Common Stock"
   },
   {
-    "symbol": "NSTS",
-    "name": "NSTS Bancorp, Inc. - Common Stock"
-  },
-  {
     "symbol": "NSYS",
     "name": "Nortech Systems Incorporated - Common Stock"
   },
@@ -15010,10 +15002,6 @@
   {
     "symbol": "NTRB",
     "name": "Nutriband Inc. - Common Stock"
-  },
-  {
-    "symbol": "NTRBW",
-    "name": "Nutriband Inc. - Warrant"
   },
   {
     "symbol": "NTRP",
@@ -15720,6 +15708,10 @@
     "name": "Opko Health, Inc. - Common Stock"
   },
   {
+    "symbol": "OPNW",
+    "name": "OpenWorld, Inc. - Common Stock"
+  },
+  {
     "symbol": "OPPJ",
     "name": "WisdomTree Japan Opportunities Fund"
   },
@@ -16342,10 +16334,6 @@
   {
     "symbol": "PDYN",
     "name": "Palladyne AI Corp. - Common stock"
-  },
-  {
-    "symbol": "PDYNW",
-    "name": "Palladyne AI Corp. - Warrant"
   },
   {
     "symbol": "PEBK",
@@ -17293,7 +17281,7 @@
   },
   {
     "symbol": "PUSA",
-    "name": "Aureus Greenway Holdings Inc. - Common Stock"
+    "name": "Powerus Corporation - Common Stock"
   },
   {
     "symbol": "PVLA",
@@ -18216,10 +18204,6 @@
     "name": "BRC Group Holdings, Inc. - Depositary Shares, each representing a 1/1000th fractional interest in a share of Series B Cumulative Perpetual Preferred Stock"
   },
   {
-    "symbol": "RILYN",
-    "name": "BRC Group Holdings, Inc. - 6.50% Senior Notes Due 2026"
-  },
-  {
     "symbol": "RILYP",
     "name": "BRC Group Holdings, Inc. - Depositary Shares, each representing a 1/1000th fractional interest in a share of Series A Cumulative Perpetual Preferred Stock"
   },
@@ -18672,6 +18656,10 @@
     "name": "Rhythm Pharmaceuticals, Inc. - Common Stock"
   },
   {
+    "symbol": "RZAI",
+    "name": "Roze AI Inc. - Common Shares"
+  },
+  {
     "symbol": "RZLT",
     "name": "Rezolute, Inc. - Common Stock (NV)"
   },
@@ -18738,6 +18726,10 @@
   {
     "symbol": "SAIL",
     "name": "SailPoint, Inc. - Common Stock"
+  },
+  {
+    "symbol": "SAIQ",
+    "name": "WISeSat.Space Holdings Corp. - Ordinary Shares"
   },
   {
     "symbol": "SAMG",
@@ -20636,6 +20628,10 @@
     "name": "GraniteShares 2x Long TDC Daily ETF"
   },
   {
+    "symbol": "TDEM",
+    "name": "T. Rowe Price Dynamic Emerging Markets Bond ETF"
+  },
+  {
     "symbol": "TDG",
     "name": "TransDigm Group"
   },
@@ -21121,7 +21117,7 @@
   },
   {
     "symbol": "TORO",
-    "name": "Toro Corp. - Common stock"
+    "name": "Toro Corp. - Common Shares"
   },
   {
     "symbol": "TOUR",
@@ -22556,10 +22552,6 @@
     "name": "Vroom, Inc. - Common Stock"
   },
   {
-    "symbol": "VRME",
-    "name": "VerifyMe, Inc. - Common Stock"
-  },
-  {
     "symbol": "VRNS",
     "name": "Varonis Systems, Inc. - Common Stock"
   },
@@ -23505,7 +23497,7 @@
   },
   {
     "symbol": "XSPC",
-    "name": "VegaShares SpaceX & Beyond Earth ETF"
+    "name": "VegaShares Space & AI ETF"
   },
   {
     "symbol": "XSPI",
