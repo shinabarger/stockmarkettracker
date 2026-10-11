@@ -832,6 +832,10 @@
     "name": "Defiance Inference AI Chip ETF"
   },
   {
+    "symbol": "AIOK",
+    "name": "AI OKTO CORP. - Common Stock"
+  },
+  {
     "symbol": "AIOS",
     "name": "AIOS Tech Inc. - Class A Common Shares"
   },
@@ -1624,10 +1628,6 @@
     "name": "Arbe Robotics Ltd. - Ordinary Shares"
   },
   {
-    "symbol": "ARBEW",
-    "name": "Arbe Robotics Ltd. - Warrant"
-  },
-  {
     "symbol": "ARBK",
     "name": "Argo Blockchain plc - American Depositary Shares"
   },
@@ -2388,8 +2388,12 @@
     "name": "CYBER HORNET S&P 500 and Bitcoin 75/25 Strategy ETF"
   },
   {
-    "symbol": "BBBYW",
-    "name": "Neighborhood Intelligence, Inc.  - Warrant"
+    "symbol": "BBCI",
+    "name": "Bradbury Capital Inc. - Ordinary Shares"
+  },
+  {
+    "symbol": "BBCIW",
+    "name": "Bradbury Capital Inc. - Warrants"
   },
   {
     "symbol": "BBCP",
@@ -2518,6 +2522,10 @@
   {
     "symbol": "BCYC",
     "name": "Bicycle Therapeutics plc - American Depositary Shares"
+  },
+  {
+    "symbol": "BDAI",
+    "name": "Biddance AI Systems, Inc. - Class A Ordinary Share"
   },
   {
     "symbol": "BDCI",
@@ -2954,10 +2962,6 @@
   {
     "symbol": "BLDP",
     "name": "Ballard Power Systems, Inc. - Common Shares"
-  },
-  {
-    "symbol": "BLFS",
-    "name": "BioLife Solutions, Inc. - Common Stock"
   },
   {
     "symbol": "BLIN",
@@ -5488,6 +5492,14 @@
     "name": "Global X ClimateTech ETF"
   },
   {
+    "symbol": "CTGG",
+    "name": "Qwest Corporation - 6.500% Notes due 2051"
+  },
+  {
+    "symbol": "CTHH",
+    "name": "Qwest Corporation - 6.750% Notes due 2052"
+  },
+  {
     "symbol": "CTKB",
     "name": "Cytek Biosciences, Inc. - Common Stock"
   },
@@ -5522,10 +5534,6 @@
   {
     "symbol": "CTSO",
     "name": "Cytosorbents Corporation - Common Stock"
-  },
-  {
-    "symbol": "CTVA",
-    "name": "Corteva"
   },
   {
     "symbol": "CTW",
@@ -6185,15 +6193,11 @@
   },
   {
     "symbol": "DPU",
-    "name": "Top KingWin Ltd - Class A Ordinary Shares"
+    "name": "Nexpu Ltd. - Class A Ordinary Shares"
   },
   {
     "symbol": "DPZ",
     "name": "Domino's"
-  },
-  {
-    "symbol": "DRCT",
-    "name": "Direct Digital Holdings, Inc. - Class A Common Stock"
   },
   {
     "symbol": "DRDB",
@@ -9876,10 +9880,6 @@
     "name": "HIVE Digital Technologies Ltd - Common Shares"
   },
   {
-    "symbol": "HKIT",
-    "name": "Hitek Global Inc. - Class A Ordinary Share"
-  },
-  {
     "symbol": "HKPD",
     "name": "Cellyan Biotechnology Co., Ltd  - Class A Ordinary Shares"
   },
@@ -10712,14 +10712,6 @@
     "name": "iShares Lithium Miners and Producers ETF"
   },
   {
-    "symbol": "ILLR",
-    "name": "Triller Group Inc. - Common Stock"
-  },
-  {
-    "symbol": "ILLRW",
-    "name": "Triller Group Inc. - Warrant"
-  },
-  {
     "symbol": "ILLU",
     "name": "Illumination Acquisition Corp I - Class A Ordinary Shares"
   },
@@ -11100,8 +11092,16 @@
     "name": "Innate Pharma S.A. - American Depositary Shares"
   },
   {
+    "symbol": "IPHX",
+    "name": "Inflection Point Acquisition Corp. VIII - Class A Ordinary Shares"
+  },
+  {
     "symbol": "IPHXU",
     "name": "Inflection Point Acquisition Corp. VIII - Unit"
+  },
+  {
+    "symbol": "IPHXW",
+    "name": "Inflection Point Acquisition Corp. VIII - Warrant"
   },
   {
     "symbol": "IPKW",
@@ -12336,10 +12336,6 @@
     "name": "LENZ Therapeutics, Inc. - Common Stock"
   },
   {
-    "symbol": "LESL",
-    "name": "Leslie's, Inc. - Common Stock"
-  },
-  {
     "symbol": "LEXI",
     "name": "Alexis Practical Tactical ETF"
   },
@@ -12864,6 +12860,10 @@
     "name": "Lululemon Athletica"
   },
   {
+    "symbol": "LUMN",
+    "name": "Lumen Technologies, Inc.  - Common Stock"
+  },
+  {
     "symbol": "LUNG",
     "name": "Pulmonx Corporation - Common Stock"
   },
@@ -13002,10 +13002,6 @@
   {
     "symbol": "MAMA",
     "name": "Mama's Creations, Inc. - Common Stock"
-  },
-  {
-    "symbol": "MAMK",
-    "name": "MaxsMaking Inc. - Class A Ordinary Shares"
   },
   {
     "symbol": "MAMO",
@@ -14660,10 +14656,6 @@
     "name": "National Healthcare Properties, Inc. - Class A Common Stock"
   },
   {
-    "symbol": "NHPBP",
-    "name": "National Healthcare Properties, Inc. - 7.125% Series B Cumulative Redeemable Perpetual Preferred Stock"
-  },
-  {
     "symbol": "NHTC",
     "name": "Natural Health Trends Corp. - Common Stock"
   },
@@ -15134,14 +15126,6 @@
   {
     "symbol": "NVMI",
     "name": "Nova Ltd. - Ordinary Shares"
-  },
-  {
-    "symbol": "NVNI",
-    "name": "Nvni Group Limited - Ordinary Shares"
-  },
-  {
-    "symbol": "NVNIW",
-    "name": "Nvni Group Limited - Warrants"
   },
   {
     "symbol": "NVNO",
@@ -16134,6 +16118,10 @@
   {
     "symbol": "PAX",
     "name": "Patria Investments Limited - Class A Common Shares"
+  },
+  {
+    "symbol": "PAXGU",
+    "name": "Pine Tree Acquisition Corp. - Units"
   },
   {
     "symbol": "PAYO",
@@ -17136,10 +17124,6 @@
     "name": "Power Solutions International, Inc. - Common Stock"
   },
   {
-    "symbol": "PSKY",
-    "name": "Paramount Skydance Corporation"
-  },
-  {
     "symbol": "PSL",
     "name": "Invesco Dorsey Wright Consumer Staples Momentum ETF"
   },
@@ -17646,10 +17630,6 @@
   {
     "symbol": "QRMI",
     "name": "Global X NASDAQ 100 Risk Managed Income ETF"
-  },
-  {
-    "symbol": "QRVO",
-    "name": "Qorvo, Inc. - Common Stock"
   },
   {
     "symbol": "QS",
@@ -18536,6 +18516,10 @@
     "name": "VanEck Retail ETF"
   },
   {
+    "symbol": "RTSN",
+    "name": "Retension Pharmaceuticals, Inc. - Common Stock"
+  },
+  {
     "symbol": "RTX",
     "name": "RTX Corporation"
   },
@@ -18618,6 +18602,10 @@
   {
     "symbol": "RWAYL",
     "name": "Runway Growth Finance Corp. - 7.50% Notes due 2027"
+  },
+  {
+    "symbol": "RWAYM",
+    "name": "Runway Growth Finance Corp. - 7.75% Notes Due 2031"
   },
   {
     "symbol": "RWIN",
@@ -18824,8 +18812,20 @@
     "name": "Scage Future - Warrants"
   },
   {
+    "symbol": "SCAT",
+    "name": "Southern Cross Acquisition II Corp. - Ordinary Shares"
+  },
+  {
+    "symbol": "SCATR",
+    "name": "Southern Cross Acquisition II Corp. - Rights"
+  },
+  {
     "symbol": "SCATU",
     "name": "Southern Cross Acquisition II Corp. - Units"
+  },
+  {
+    "symbol": "SCATW",
+    "name": "Southern Cross Acquisition II Corp. - Warrants"
   },
   {
     "symbol": "SCDS",
@@ -19352,6 +19352,10 @@
     "name": "SkyAI, Inc. - Warrant"
   },
   {
+    "symbol": "SKYD",
+    "name": "Skydance Corporation"
+  },
+  {
     "symbol": "SKYE",
     "name": "Skye Bioscience, Inc. - Common Stock"
   },
@@ -19442,10 +19446,6 @@
   {
     "symbol": "SLNHP",
     "name": "Soluna Holdings, Inc. - 9.0% Series A Cumulative Perpetual Preferred Stock"
-  },
-  {
-    "symbol": "SLP",
-    "name": "Simulations Plus, Inc. - Common Stock"
   },
   {
     "symbol": "SLQD",
@@ -19830,18 +19830,6 @@
   {
     "symbol": "SPIT",
     "name": "F/m Emerald Special Situations ETF"
-  },
-  {
-    "symbol": "SPKL",
-    "name": "Spark I Acquisition Corp. - Class A Ordinary Share"
-  },
-  {
-    "symbol": "SPKLU",
-    "name": "Spark I Acquisition Corp. - Unit"
-  },
-  {
-    "symbol": "SPKLW",
-    "name": "Spark I Acquisition Corp. - Warrant"
   },
   {
     "symbol": "SPOG",
@@ -20540,8 +20528,16 @@
     "name": "Turtle Beach Corporation - Common Stock"
   },
   {
+    "symbol": "TBCV",
+    "name": "Thunder Bridge Capital Partners V, Ltd. - Class A Ordinary Shares"
+  },
+  {
     "symbol": "TBCVU",
     "name": "Thunder Bridge Capital Partners V, Ltd. - Units"
+  },
+  {
+    "symbol": "TBCVW",
+    "name": "Thunder Bridge Capital Partners V, Ltd. - Warrants"
   },
   {
     "symbol": "TBIL",
@@ -20562,14 +20558,6 @@
   {
     "symbol": "TCAN",
     "name": "21Shares Canton Network ETF"
-  },
-  {
-    "symbol": "TCBI",
-    "name": "Texas Capital Bancshares, Inc. - Common Stock"
-  },
-  {
-    "symbol": "TCBIO",
-    "name": "Texas Capital Bancshares, Inc. - Depositary Shares 5.75% Fixed Rate Non-Cumulative Perpetual Preferred Stock Series B"
   },
   {
     "symbol": "TCBK",
@@ -21336,6 +21324,10 @@
     "name": "Trevi Therapeutics, Inc. - Common Stock"
   },
   {
+    "symbol": "TRXB",
+    "name": "TRex Bio, Inc. - Common stock"
+  },
+  {
     "symbol": "TSAT",
     "name": "Telesat Corporation - Class A Common Shares and Class B Variable Voting Shares"
   },
@@ -21574,6 +21566,10 @@
   {
     "symbol": "TWIN",
     "name": "Twin Disc, Incorporated - Common Stock"
+  },
+  {
+    "symbol": "TWLO",
+    "name": "Twilio"
   },
   {
     "symbol": "TWLV",
@@ -22724,6 +22720,10 @@
     "name": "Voyager Therapeutics, Inc. - Common Stock"
   },
   {
+    "symbol": "VYLR",
+    "name": "Vylor"
+  },
+  {
     "symbol": "VYMI",
     "name": "Vanguard International High Dividend Yield ETF"
   },
@@ -22754,14 +22754,6 @@
   {
     "symbol": "WAFU",
     "name": "Wah Fu Education Group Limited - Ordinary Shares"
-  },
-  {
-    "symbol": "WALD",
-    "name": "Waldencast plc - Class A Ordinary Share"
-  },
-  {
-    "symbol": "WALDW",
-    "name": "Waldencast plc - Warrant"
   },
   {
     "symbol": "WAMA",
@@ -22798,10 +22790,6 @@
   {
     "symbol": "WB",
     "name": "Weibo Corporation - American Depositary Shares"
-  },
-  {
-    "symbol": "WBD",
-    "name": "Warner Bros. Discovery"
   },
   {
     "symbol": "WBTN",
@@ -22972,10 +22960,6 @@
     "name": "Wix.com Ltd. - Ordinary Shares"
   },
   {
-    "symbol": "WKEY",
-    "name": "WISeKey International Holding Ltd - American Depositary Shares"
-  },
-  {
     "symbol": "WKHS",
     "name": "Workhorse Group, Inc. - Common Stock"
   },
@@ -23064,8 +23048,16 @@
     "name": "Petco Health and Wellness Company, Inc. - Class A Common Stock"
   },
   {
+    "symbol": "WORX",
+    "name": "SCWorx Corp. - Common Stock"
+  },
+  {
     "symbol": "WPRT",
     "name": "Westport Fuel Systems Inc - Common Shares"
+  },
+  {
+    "symbol": "WQEY",
+    "name": "WISeQey Corp - Ordinary Shares"
   },
   {
     "symbol": "WRAP",
