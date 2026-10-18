@@ -272,6 +272,10 @@
     "name": "Acadia Healthcare Company, Inc. - Common Stock"
   },
   {
+    "symbol": "ACHP",
+    "name": "Global X Asia Semiconductor ETF"
+  },
+  {
     "symbol": "ACHV",
     "name": "Achieve Life Sciences, Inc.  - Common Shares"
   },
@@ -1296,6 +1300,10 @@
     "name": "Amarin Corporation plc - American Depositary Shares"
   },
   {
+    "symbol": "AMRO",
+    "name": "Amaero Inc. - Common Stock"
+  },
+  {
     "symbol": "AMRX",
     "name": "Amneal Pharmaceuticals, Inc. - Class A Common Stock"
   },
@@ -2228,6 +2236,10 @@
     "name": "Axiom Intelligence Acquisition Corp 1 - Units"
   },
   {
+    "symbol": "AXNX",
+    "name": "Axonex AI Group Limited - Class A Ordinary Shares"
+  },
+  {
     "symbol": "AXON",
     "name": "Axon Enterprise"
   },
@@ -2414,10 +2426,6 @@
   {
     "symbol": "BBLG",
     "name": "Bone Biologics Corp - Common Stock"
-  },
-  {
-    "symbol": "BBLGW",
-    "name": "Bone Biologics Corp - warrants"
   },
   {
     "symbol": "BBNX",
@@ -3070,6 +3078,10 @@
   {
     "symbol": "BMM",
     "name": "Blue Moon Metals Inc. - Common Shares"
+  },
+  {
+    "symbol": "BMMX",
+    "name": "Black Mammoth Metals Corporation - Common Shares"
   },
   {
     "symbol": "BMNG",
@@ -5544,6 +5556,10 @@
     "name": "Citius Pharmaceuticals, Inc. - Common Stock"
   },
   {
+    "symbol": "CTY",
+    "name": "City Therapeutics, Inc. - Common Stock"
+  },
+  {
     "symbol": "CUB",
     "name": "Lionheart Holdings - Class A Ordinary Shares"
   },
@@ -5894,6 +5910,10 @@
   {
     "symbol": "DFGP",
     "name": "Dimensional Global Core Plus Fixed Income ETF"
+  },
+  {
+    "symbol": "DFGV",
+    "name": "DFA Intermediate Government Fixed Income Portfolio: ETF Class Shares"
   },
   {
     "symbol": "DFGX",
@@ -6862,10 +6882,6 @@
   {
     "symbol": "EMR",
     "name": "Emerson Electric"
-  },
-  {
-    "symbol": "EMSC",
-    "name": "Sophus Capital Emerging Market Small Cap ETF"
   },
   {
     "symbol": "EMXC",
@@ -7974,6 +7990,10 @@
   {
     "symbol": "FLNT",
     "name": "Fluent, Inc. - Common Stock"
+  },
+  {
+    "symbol": "FLSC",
+    "name": "Frazier Life Sciences Acquisition Corp. II - Class A Ordinary Shares"
   },
   {
     "symbol": "FLUX",
@@ -9288,10 +9308,6 @@
     "name": "GridAI Technologies Corp.  - Common Stock"
   },
   {
-    "symbol": "GREEL",
-    "name": "Vulcan Infrastructure and Power Inc. - 8.50% Senior Notes due 2026"
-  },
-  {
     "symbol": "GRFS",
     "name": "Grifols, S.A. - American Depositary Shares"
   },
@@ -10360,6 +10376,10 @@
     "name": "iShares Systematic Alternatives Active ETF"
   },
   {
+    "symbol": "IAM",
+    "name": "Iambic Therapeutics, Inc. - Common Stock"
+  },
+  {
     "symbol": "IART",
     "name": "Integra LifeSciences Holdings Corporation - Common Stock"
   },
@@ -11222,6 +11242,10 @@
   {
     "symbol": "IRIX",
     "name": "IRIDEX Corporation - Common Stock"
+  },
+  {
+    "symbol": "IRLA",
+    "name": "IRulya Therapeutics Inc. - Common Stock"
   },
   {
     "symbol": "IRM",
@@ -13209,7 +13233,7 @@
   },
   {
     "symbol": "MCK",
-    "name": "McKesson Corporation"
+    "name": "McKesson"
   },
   {
     "symbol": "MCO",
@@ -13460,6 +13484,10 @@
     "name": "MacroGenics, Inc. - Common Stock"
   },
   {
+    "symbol": "MGOL",
+    "name": "Leverage Shares MANGOS ETF"
+  },
+  {
     "symbol": "MGPI",
     "name": "MGP Ingredients, Inc. - Common Stock"
   },
@@ -13506,10 +13534,6 @@
   {
     "symbol": "MILN",
     "name": "Global X Millennial Consumer ETF"
-  },
-  {
-    "symbol": "MIMI",
-    "name": "Mint Incorporation Limited - Class A Ordinary Shares"
   },
   {
     "symbol": "MIND",
@@ -15204,6 +15228,10 @@
     "name": "Nexus Advanced Technologies Inc. - Warrant"
   },
   {
+    "symbol": "NXDR",
+    "name": "Nextdoor Holdings, Inc. - Common Stock"
+  },
+  {
     "symbol": "NXGL",
     "name": "NexGel, Inc - Common Stock"
   },
@@ -16380,6 +16408,10 @@
     "name": "Parametric Equity Plus ETF"
   },
   {
+    "symbol": "PEPT",
+    "name": "REX Peptide ETF"
+  },
+  {
     "symbol": "PERI",
     "name": "Perion Network Ltd - Ordinary Shares"
   },
@@ -17424,18 +17456,6 @@
     "name": "YieldMax Nasdaq 100 0DTE Covered Call Strategy ETF"
   },
   {
-    "symbol": "QETA",
-    "name": "Quetta Acquisition Corporation - Common Stock"
-  },
-  {
-    "symbol": "QETAR",
-    "name": "Quetta Acquisition Corporation - Right"
-  },
-  {
-    "symbol": "QETAU",
-    "name": "Quetta Acquisition Corporation - Unit"
-  },
-  {
     "symbol": "QEW",
     "name": "Invesco QQQ Equal Weight ETF"
   },
@@ -17482,10 +17502,6 @@
   {
     "symbol": "QNBC",
     "name": "QNB Corp. - Common Stock"
-  },
-  {
-    "symbol": "QNCX",
-    "name": "Quince Therapeutics, Inc. - Common Stock"
   },
   {
     "symbol": "QNDX",
@@ -18368,6 +18384,10 @@
     "name": "Rein Therapeutics, Inc. - Common Stock"
   },
   {
+    "symbol": "RNTZ",
+    "name": "Rantizo - Class A Ordinary Shares"
+  },
+  {
     "symbol": "RNW",
     "name": "ReNew Energy Global plc - Class A Shares"
   },
@@ -18514,6 +18534,10 @@
   {
     "symbol": "RTH",
     "name": "VanEck Retail ETF"
+  },
+  {
+    "symbol": "RTHY",
+    "name": "F/m Long-Term Treasury Inflation-Protected Security (TIPS) ETF"
   },
   {
     "symbol": "RTSN",
@@ -19322,10 +19346,6 @@
   {
     "symbol": "SKIN",
     "name": "SkinHealth Systems Inc. - Class A Common Stock"
-  },
-  {
-    "symbol": "SKK",
-    "name": "SKK Holdings Limited - Class A Ordinary Shares"
   },
   {
     "symbol": "SKOR",
@@ -20600,6 +20620,10 @@
     "name": "Tucows Inc. - Common Stock"
   },
   {
+    "symbol": "TCXB",
+    "name": "TCGX Acquisition Corp. II - Class A Ordinary Shares"
+  },
+  {
     "symbol": "TDAC",
     "name": "Translational Development Acquisition Corp. - Ordinary Shares"
   },
@@ -21704,10 +21728,6 @@
     "name": "Ultra Clean Holdings, Inc. - Common Stock"
   },
   {
-    "symbol": "UCYB",
-    "name": "ProShares Ultra Nasdaq Cybersecurity"
-  },
-  {
     "symbol": "UDR",
     "name": "UDR, Inc."
   },
@@ -22753,7 +22773,7 @@
   },
   {
     "symbol": "WAFU",
-    "name": "Wah Fu Education Group Limited - Ordinary Shares"
+    "name": "Wah Fu Education & Technology Group Ltd. - Ordinary Shares"
   },
   {
     "symbol": "WAMA",
@@ -23449,15 +23469,11 @@
   },
   {
     "symbol": "XRPN",
-    "name": "Armada Acquisition Corp. II - Class A Ordinary Shares"
-  },
-  {
-    "symbol": "XRPNU",
-    "name": "Armada Acquisition Corp. II - Units"
+    "name": "Evernorth Holdings Inc. - Class A Ordinary Shares"
   },
   {
     "symbol": "XRPNW",
-    "name": "Armada Acquisition Corp. II - Warrant"
+    "name": "Evernorth Holdings Inc. - Warrants"
   },
   {
     "symbol": "XRPT",
