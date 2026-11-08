@@ -232,6 +232,10 @@
     "name": "ProFrac Holding Corp. - Class A Common Stock"
   },
   {
+    "symbol": "ACEM",
+    "name": "American Century Emerging Markets Insights ETF"
+  },
+  {
     "symbol": "ACEP",
     "name": "ARS Core Equity Portfolio ETF"
   },
@@ -676,6 +680,14 @@
     "name": "KraneShares Public-Private AI & Technology ETF"
   },
   {
+    "symbol": "AGLT",
+    "name": "Agility Robotics, Inc. - Ordinary Shares"
+  },
+  {
+    "symbol": "AGLTW",
+    "name": "Agility Robotics, Inc. - Warrants"
+  },
+  {
     "symbol": "AGMB",
     "name": "AgomAb Therapeutics NV - ADRs representing one common share."
   },
@@ -966,18 +978,6 @@
   {
     "symbol": "ALCO",
     "name": "Alico, Inc. - Common Stock"
-  },
-  {
-    "symbol": "ALDF",
-    "name": "Aldel Financial II Inc. - Class A Ordinary Shares"
-  },
-  {
-    "symbol": "ALDFU",
-    "name": "Aldel Financial II Inc. - Units"
-  },
-  {
-    "symbol": "ALDFW",
-    "name": "Aldel Financial II Inc. - Warrants"
   },
   {
     "symbol": "ALDX",
@@ -2088,10 +2088,6 @@
     "name": "Aurelion Inc.  - Class A Ordinary Shares"
   },
   {
-    "symbol": "AUROW",
-    "name": "Aurora Innovation, Inc.  - Warrant"
-  },
-  {
     "symbol": "AUTL",
     "name": "Autolus Therapeutics plc - American Depositary Shares"
   },
@@ -2698,10 +2694,6 @@
   {
     "symbol": "BFRI",
     "name": "Biofrontera Inc. - Common Stock"
-  },
-  {
-    "symbol": "BFRIW",
-    "name": "Biofrontera Inc. - Warrants"
   },
   {
     "symbol": "BFST",
@@ -3984,6 +3976,10 @@
     "name": "Pathward Financial, Inc. - Common Stock"
   },
   {
+    "symbol": "CASK",
+    "name": "Sempreon, Inc. - Common Stock"
+  },
+  {
     "symbol": "CASS",
     "name": "Cass Information Systems, Inc - Common Stock"
   },
@@ -4206,18 +4202,6 @@
   {
     "symbol": "CCTG",
     "name": "CCSC Technology International Holdings Limited - Class A Ordinary Shares"
-  },
-  {
-    "symbol": "CCXI",
-    "name": "Churchill Capital Corp XI - Class A Ordinary Shares"
-  },
-  {
-    "symbol": "CCXIU",
-    "name": "Churchill Capital Corp XI - Units"
-  },
-  {
-    "symbol": "CCXIW",
-    "name": "Churchill Capital Corp XI - Warrants"
   },
   {
     "symbol": "CD",
@@ -6024,10 +6008,6 @@
     "name": "1stdibs.com, Inc. - Common Stock"
   },
   {
-    "symbol": "DINE",
-    "name": "Simplify Tax Aware Diversified Income Strategy ETF"
-  },
-  {
     "symbol": "DIOD",
     "name": "Diodes Incorporated - Common Stock"
   },
@@ -7149,7 +7129,7 @@
   },
   {
     "symbol": "EUDA",
-    "name": "Euda Health Holdings Limited - Ordinary Shares"
+    "name": "Euda Health Holdings Limited - Class A Ordinary Shares"
   },
   {
     "symbol": "EUDAW",
@@ -9120,10 +9100,6 @@
     "name": "Genasys Inc. - Common Stock"
   },
   {
-    "symbol": "GNTA",
-    "name": "Genenta Science S.p.A. - American Depositary Shares"
-  },
-  {
     "symbol": "GNTX",
     "name": "Gentex Corporation - Common Stock"
   },
@@ -9946,10 +9922,6 @@
   {
     "symbol": "HNVR",
     "name": "Hanover Bancorp, Inc. - Common Stock"
-  },
-  {
-    "symbol": "HODO",
-    "name": "House of Doge Inc. - Common Stock"
   },
   {
     "symbol": "HODU",
@@ -10892,10 +10864,6 @@
     "name": "Pacer ActiveAlpha India Quality ETF"
   },
   {
-    "symbol": "INDV",
-    "name": "Indivior Pharmaceuticals, Inc.  - Common Stock"
-  },
-  {
     "symbol": "INDY",
     "name": "iShares India 50 ETF"
   },
@@ -10914,6 +10882,14 @@
   {
     "symbol": "INIO",
     "name": "INNIO N.V. - Ordinary Shares"
+  },
+  {
+    "symbol": "INJC",
+    "name": "Canary Staked INJ ETF"
+  },
+  {
+    "symbol": "INK",
+    "name": "AB Equity Premium Income ETF"
   },
   {
     "symbol": "INKT",
@@ -11449,7 +11425,7 @@
   },
   {
     "symbol": "JBDI",
-    "name": "JBDI Holdings Limited - Ordinary Shares"
+    "name": "JBDI Holdings Limited - Class A Ordinary Shares"
   },
   {
     "symbol": "JBHT",
@@ -12092,10 +12068,6 @@
     "name": "KVH Industries, Inc. - Common Stock"
   },
   {
-    "symbol": "KVUE",
-    "name": "Kenvue"
-  },
-  {
     "symbol": "KXIN",
     "name": "Kaixin Holdings - Ordinary Shares"
   },
@@ -12177,7 +12149,7 @@
   },
   {
     "symbol": "LASE",
-    "name": "Laser Photonics Corporation - Common Stock"
+    "name": "LASE Corp. - Common Stock"
   },
   {
     "symbol": "LASR",
@@ -12288,8 +12260,16 @@
     "name": "Lincoln Electric Holdings, Inc. - Common Shares"
   },
   {
+    "symbol": "LEDR",
+    "name": "Leader's Advantage Acquisition Corp. - Class A Ordinary Shares"
+  },
+  {
     "symbol": "LEDRU",
     "name": "Leader's Advantage Acquisition Corp. - Units"
+  },
+  {
+    "symbol": "LEDRW",
+    "name": "Leader's Advantage Acquisition Corp. - Warrants"
   },
   {
     "symbol": "LEDS",
@@ -12726,10 +12706,6 @@
   {
     "symbol": "LPTH",
     "name": "LightPath Technologies, Inc. - Class A Common Stock"
-  },
-  {
-    "symbol": "LQ",
-    "name": "Simplify Tax Aware Alternatives ETF"
   },
   {
     "symbol": "LQDA",
@@ -13448,10 +13424,6 @@
     "name": "Leverage Shares MANGOS ETF"
   },
   {
-    "symbol": "MGPI",
-    "name": "MGP Ingredients, Inc. - Common Stock"
-  },
-  {
     "symbol": "MGRC",
     "name": "McGrath RentCorp - Common Stock"
   },
@@ -13586,14 +13558,6 @@
   {
     "symbol": "MLCO",
     "name": "Melco Resorts & Entertainment Limited - American Depositary Shares"
-  },
-  {
-    "symbol": "MLEC",
-    "name": "Moolec Science SA - Ordinary Shares"
-  },
-  {
-    "symbol": "MLECW",
-    "name": "Moolec Science SA - Warrant"
   },
   {
     "symbol": "MLGO",
@@ -14302,6 +14266,10 @@
   {
     "symbol": "NANOW",
     "name": "Forge Nano Holdings Inc. - Warrants"
+  },
+  {
+    "symbol": "NARA",
+    "name": "Narragansett Bancorp, Inc. - Common Stock"
   },
   {
     "symbol": "NATO",
@@ -15477,7 +15445,7 @@
   },
   {
     "symbol": "OKTA",
-    "name": "Okta, Inc. - Class A Common Stock"
+    "name": "Okta, Inc."
   },
   {
     "symbol": "OKTG",
@@ -17621,7 +17589,7 @@
   },
   {
     "symbol": "QTEC",
-    "name": "First Trust NASDAQ-100-Technology Sector Index Fund"
+    "name": "First Trust NASDAQ-100- Technology Index Fund"
   },
   {
     "symbol": "QTEX",
@@ -18650,6 +18618,10 @@
   {
     "symbol": "SABS",
     "name": "SAB Biotherapeutics, Inc. - Common Stock"
+  },
+  {
+    "symbol": "SAEN",
+    "name": "Genenta Science S.p.A. - American Depositary Shares"
   },
   {
     "symbol": "SAFT",
@@ -20169,7 +20141,7 @@
   },
   {
     "symbol": "SUPN",
-    "name": "Supernus Pharmaceuticals, Inc. - Common Stock"
+    "name": "Supernus, Inc. - Common Stock"
   },
   {
     "symbol": "SUPP",
@@ -20290,10 +20262,6 @@
   {
     "symbol": "SWK",
     "name": "Stanley Black & Decker"
-  },
-  {
-    "symbol": "SWKHL",
-    "name": "SWK Holdings Corporation - 9.00% Senior Notes due 2027"
   },
   {
     "symbol": "SWKS",
@@ -23453,15 +23421,15 @@
   },
   {
     "symbol": "XTER",
-    "name": "Karman Line Acquisition Corp. - Class A Ordinary Shares"
+    "name": "Xterax Corporation II - Class A Ordinary Shares"
   },
   {
     "symbol": "XTERU",
-    "name": "Karman Line Acquisition Corp. - Units"
+    "name": "Xterax Corporation II - Units"
   },
   {
     "symbol": "XTERW",
-    "name": "Karman Line Acquisition Corp. - Warrants"
+    "name": "Xterax Corporation II - Warrants"
   },
   {
     "symbol": "XTIA",
