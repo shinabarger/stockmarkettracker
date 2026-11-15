@@ -280,10 +280,6 @@
     "name": "Global X Asia Semiconductor ETF"
   },
   {
-    "symbol": "ACHV",
-    "name": "Achieve Life Sciences, Inc.  - Common Shares"
-  },
-  {
     "symbol": "ACIC",
     "name": "American Coastal Insurance Corporation - Common Stock"
   },
@@ -3748,10 +3744,6 @@
     "name": "The Baldwin Insurance Group, Inc. - Class A Common Stock"
   },
   {
-    "symbol": "BWMN",
-    "name": "Bowman Consulting Group Ltd. - Common Stock"
-  },
-  {
     "symbol": "BX",
     "name": "Blackstone Inc."
   },
@@ -4720,10 +4712,6 @@
     "name": "Clearfield, Inc. - Common Stock"
   },
   {
-    "symbol": "CLGN",
-    "name": "CollPlant Biotechnologies Ltd. - Ordinary Shares"
-  },
-  {
     "symbol": "CLIK",
     "name": "Click Holdings Limited - Ordinary Share"
   },
@@ -5314,6 +5302,10 @@
   {
     "symbol": "CRMLW",
     "name": "Critical Metals Corp. - Warrants"
+  },
+  {
+    "symbol": "CRMN",
+    "name": "Skyline Builders Group Holding Limited - Class A Ordinary Shares"
   },
   {
     "symbol": "CRMT",
@@ -7324,10 +7316,6 @@
     "name": "EZCORP, Inc. - Class A Non-Voting Common Stock"
   },
   {
-    "symbol": "EZRA",
-    "name": "Reliance Global Group, Inc. - Common Stock"
-  },
-  {
     "symbol": "EZRO",
     "name": "AlphaDroid Defensive Sector Rotation ETF"
   },
@@ -7546,14 +7534,6 @@
   {
     "symbol": "FDCF",
     "name": "Fidelity Disruptive Communications ETF"
-  },
-  {
-    "symbol": "FDFF",
-    "name": "Fidelity Disruptive Finance ETF"
-  },
-  {
-    "symbol": "FDIF",
-    "name": "Fidelity Disruptors ETF"
   },
   {
     "symbol": "FDIG",
@@ -8018,14 +7998,6 @@
   {
     "symbol": "FMBH",
     "name": "First Mid Bancshares, Inc. - Common Stock"
-  },
-  {
-    "symbol": "FMED",
-    "name": "Fidelity Disruptive Medicine ETF"
-  },
-  {
-    "symbol": "FMET",
-    "name": "Fidelity Metaverse ETF"
   },
   {
     "symbol": "FMFC",
@@ -8653,7 +8625,7 @@
   },
   {
     "symbol": "GCBC",
-    "name": "Greene County Bancorp, Inc. - Common Stock"
+    "name": "Greene Bancorp, Inc. - Common Stock"
   },
   {
     "symbol": "GCGR",
@@ -10900,10 +10872,6 @@
     "name": "INLIF LIMITED - Class A Ordinary shares"
   },
   {
-    "symbol": "INM",
-    "name": "InMed Pharmaceuticals Inc. - Common Shares"
-  },
-  {
     "symbol": "INMB",
     "name": "INmune Bio Inc. - Common stock"
   },
@@ -11680,10 +11648,6 @@
     "name": "Scharf ETF"
   },
   {
-    "symbol": "KAZR",
-    "name": "Skyline Builders Group Holding Limited - Class A Ordinary Shares"
-  },
-  {
     "symbol": "KBON",
     "name": "Karbon Capital Partners Corp. - Class A Ordinary Shares"
   },
@@ -11950,10 +11914,6 @@
   {
     "symbol": "KPRX",
     "name": "Kiora Pharmaceuticals, Inc.  - Common Stock"
-  },
-  {
-    "symbol": "KPTI",
-    "name": "Karyopharm Therapeutics Inc. - Common Stock"
   },
   {
     "symbol": "KQQQ",
@@ -12652,8 +12612,16 @@
     "name": "The Lovesac Company - Common Stock"
   },
   {
+    "symbol": "LOVI",
+    "name": "Live Oak Acquisition Corp. VI - Class A Ordinary Shares"
+  },
+  {
     "symbol": "LOVIU",
     "name": "Live Oak Acquisition Corp. VI - Units"
+  },
+  {
+    "symbol": "LOVIW",
+    "name": "Live Oak Acquisition Corp. VI - Warrants"
   },
   {
     "symbol": "LOW",
@@ -13178,10 +13146,6 @@
   {
     "symbol": "MCRI",
     "name": "Monarch Casino & Resort, Inc. - Common Stock"
-  },
-  {
-    "symbol": "MCTA",
-    "name": "Charming Medical Limited - Class A Ordinary Shares"
   },
   {
     "symbol": "MDAI",
@@ -13990,6 +13954,10 @@
   {
     "symbol": "MTLS",
     "name": "Materialise NV - American Depositary Shares"
+  },
+  {
+    "symbol": "MTRI",
+    "name": "Mentari Therapeutics, Inc. - Common Stock"
   },
   {
     "symbol": "MTRX",
@@ -15200,10 +15168,6 @@
     "name": "Next Technology Holding Inc. - Ordinary Shares"
   },
   {
-    "symbol": "NXXT",
-    "name": "NextNRG, Inc. - Common Stock"
-  },
-  {
     "symbol": "NYAX",
     "name": "Nayax Ltd. - Ordinary Shares"
   },
@@ -15473,7 +15437,7 @@
   },
   {
     "symbol": "OLMA",
-    "name": "Olema Pharmaceuticals, Inc. - Common Stock"
+    "name": "Olema Oncology, Inc. - Common Stock"
   },
   {
     "symbol": "OLOX",
@@ -15626,6 +15590,10 @@
   {
     "symbol": "OPENZ",
     "name": "Opendoor Technologies Inc  - Series Z Warrants, each whole warrant exercisable to purchase one share of Common Stock at an exercise price of $17.00 per warrant"
+  },
+  {
+    "symbol": "OPHI",
+    "name": "CollPlant Biotechnologies Ltd. - Ordinary Shares"
   },
   {
     "symbol": "OPI",
@@ -17152,10 +17120,6 @@
     "name": "GraniteShares 2x Long PLTR Daily ETF"
   },
   {
-    "symbol": "PTLE",
-    "name": "PTL LTD - Class A Ordinary Shares"
-  },
-  {
     "symbol": "PTLO",
     "name": "Portillo's Inc. - Class A Common Stock"
   },
@@ -17632,6 +17596,10 @@
     "name": "QuickLogic Corporation - Common Stock"
   },
   {
+    "symbol": "QUIT",
+    "name": "Achieve Life Sciences, Inc.  - Common Shares"
+  },
+  {
     "symbol": "QUMS",
     "name": "Quantumsphere Acquisition Corp. - Ordinary Shares"
   },
@@ -17898,10 +17866,6 @@
   {
     "symbol": "RDZNW",
     "name": "Roadzen, Inc. - Warrants"
-  },
-  {
-    "symbol": "REAI",
-    "name": "Intelligent Real Estate ETF"
   },
   {
     "symbol": "REAL",
@@ -18346,10 +18310,6 @@
   {
     "symbol": "ROK",
     "name": "Rockwell Automation"
-  },
-  {
-    "symbol": "ROKU",
-    "name": "Roku, Inc. - Class A Common Stock"
   },
   {
     "symbol": "ROL",
@@ -18832,8 +18792,20 @@
     "name": "Social Commerce Partners Corporation - Warrant"
   },
   {
+    "symbol": "SCQC",
+    "name": "SPACCircle Acquisition Corp. - Class A Ordinary Shares"
+  },
+  {
+    "symbol": "SCQCR",
+    "name": "SPACCircle Acquisition Corp. - Rights"
+  },
+  {
     "symbol": "SCQCU",
     "name": "SPACCircle Acquisition Corp. - Units"
+  },
+  {
+    "symbol": "SCQCW",
+    "name": "SPACCircle Acquisition Corp. - Warrants"
   },
   {
     "symbol": "SCSC",
@@ -20246,10 +20218,6 @@
   {
     "symbol": "SWAG",
     "name": "Stran & Company, Inc. - Common Stock"
-  },
-  {
-    "symbol": "SWAGW",
-    "name": "Stran & Company, Inc. - Warrant"
   },
   {
     "symbol": "SWBI",
@@ -21728,10 +21696,6 @@
     "name": "Ulta Beauty"
   },
   {
-    "symbol": "ULTI",
-    "name": "REX IncomeMax Option Strategy ETF"
-  },
-  {
     "symbol": "ULVM",
     "name": "VictoryShares US Value Momentum ETF"
   },
@@ -22825,7 +22789,7 @@
   },
   {
     "symbol": "WFRD",
-    "name": "Weatherford International plc - Ordinary shares"
+    "name": "Weatherford International Corp - Common Stock"
   },
   {
     "symbol": "WGMI",
@@ -23140,6 +23104,10 @@
     "name": "WW International, Inc.  - Common Stock"
   },
   {
+    "symbol": "WWB",
+    "name": "Windward Bio Group AG - Common shares"
+  },
+  {
     "symbol": "WWD",
     "name": "Woodward, Inc. - Common Stock"
   },
@@ -23266,6 +23234,10 @@
   {
     "symbol": "XGN",
     "name": "Exagen Inc. - Common Stock"
+  },
+  {
+    "symbol": "XGPU",
+    "name": "Reliance Global Group, Inc. - Common Stock"
   },
   {
     "symbol": "XHG",
@@ -23790,5 +23762,9 @@
   {
     "symbol": "ZYME",
     "name": "Zymeworks Inc. - Common Stock"
+  },
+  {
+    "symbol": "ZYN",
+    "name": "PTL LTD - Class A Ordinary Shares"
   }
 ]
