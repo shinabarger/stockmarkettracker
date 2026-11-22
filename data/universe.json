@@ -108,6 +108,10 @@
     "name": "Alpha Architect US Equity 4 ETF"
   },
   {
+    "symbol": "AAUD",
+    "name": "Alpha Architect US Equity 5 ETF"
+  },
+  {
     "symbol": "AAUS",
     "name": "Alpha Architect US Equity ETF"
   },
@@ -1284,10 +1288,6 @@
     "name": "Amplitech Group, Inc. - Common Stock"
   },
   {
-    "symbol": "AMPGZ",
-    "name": "Amplitech Group, Inc. - Series B Right"
-  },
-  {
     "symbol": "AMPH",
     "name": "Amphastar Pharmaceuticals, Inc. - Common Stock"
   },
@@ -1430,6 +1430,10 @@
   {
     "symbol": "ANPA",
     "name": "Rich Sparkle Holdings Limited - Ordinary Shares"
+  },
+  {
+    "symbol": "ANT",
+    "name": "Anthropic, PBC - Class A Common Stock"
   },
   {
     "symbol": "ANTA",
@@ -2608,10 +2612,6 @@
     "name": "Heartbeam, Inc. - Common Stock"
   },
   {
-    "symbol": "BEATW",
-    "name": "Heartbeam, Inc. - Warrant"
-  },
-  {
     "symbol": "BEDY",
     "name": "BNY Mellon Enhanced Dividend and Income ETF"
   },
@@ -3368,8 +3368,16 @@
     "name": "Brown & Brown"
   },
   {
+    "symbol": "BRRK",
+    "name": "Bluerock Acquisition Corp. II - Class A Ordinary Shares"
+  },
+  {
     "symbol": "BRRKU",
     "name": "Bluerock Acquisition Corp. II - Units"
+  },
+  {
+    "symbol": "BRRKW",
+    "name": "Bluerock Acquisition Corp. II - Warrants"
   },
   {
     "symbol": "BRRR",
@@ -3606,10 +3614,6 @@
   {
     "symbol": "BTBD",
     "name": "BT Brands, Inc. - Common Stock"
-  },
-  {
-    "symbol": "BTBDW",
-    "name": "BT Brands, Inc. - Warrant"
   },
   {
     "symbol": "BTBT",
@@ -4134,6 +4138,10 @@
   {
     "symbol": "CCHH",
     "name": "CCH Holdings Ltd - Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CCHP",
+    "name": "Global X China Semiconductor ETF"
   },
   {
     "symbol": "CCI",
@@ -5628,6 +5636,14 @@
     "name": "CaliberCos Inc. - Class A Common Stock"
   },
   {
+    "symbol": "CWPD",
+    "name": "CWP Premium Dividend ETF"
+  },
+  {
+    "symbol": "CWPG",
+    "name": "CWP Premium Growth ETF"
+  },
+  {
     "symbol": "CWST",
     "name": "Casella Waste Systems, Inc. - Class A Common Stock"
   },
@@ -5708,6 +5724,10 @@
     "name": "Citizens Community Bancorp, Inc. - Common Stock"
   },
   {
+    "symbol": "CZZL",
+    "name": "Cizzle Brands Corporation - Common Stock"
+  },
+  {
     "symbol": "D",
     "name": "Dominion Energy"
   },
@@ -5766,6 +5786,10 @@
   {
     "symbol": "DASH",
     "name": "DoorDash"
+  },
+  {
+    "symbol": "DAU",
+    "name": "GraniteShares Autocallable AMD ETF"
   },
   {
     "symbol": "DAVE",
@@ -6188,6 +6212,10 @@
     "name": "Domino's"
   },
   {
+    "symbol": "DRAC",
+    "name": "GraniteShares Autocallable DRAM ETF"
+  },
+  {
     "symbol": "DRDB",
     "name": "Roman DBDR Acquisition Corp. II - Ordinary shares"
   },
@@ -6378,10 +6406,6 @@
   {
     "symbol": "DVGR",
     "name": "DAC 3D Dividend Growth ETF"
-  },
-  {
-    "symbol": "DVLT",
-    "name": "Datavault AI Inc. - Common Stock"
   },
   {
     "symbol": "DVLU",
@@ -6918,6 +6942,10 @@
   {
     "symbol": "ENVX",
     "name": "Enovix Corporation - Common Stock"
+  },
+  {
+    "symbol": "ENVXW",
+    "name": "Enovix Corporation - Warrants"
   },
   {
     "symbol": "ENZL",
@@ -7536,6 +7564,18 @@
     "name": "Fidelity Disruptive Communications ETF"
   },
   {
+    "symbol": "FDGX",
+    "name": "First Digital Acquisition Corp Ltd. - Class A Ordinary Shares"
+  },
+  {
+    "symbol": "FDGXU",
+    "name": "First Digital Acquisition Corp Ltd. - Units"
+  },
+  {
+    "symbol": "FDGXW",
+    "name": "First Digital Acquisition Corp Ltd. - Warrants"
+  },
+  {
     "symbol": "FDIG",
     "name": "Fidelity Crypto Industry and Digital Payments ETF"
   },
@@ -8077,7 +8117,7 @@
   },
   {
     "symbol": "FOFO",
-    "name": "Hang Feng Technology Innovation Co., Ltd. - Ordinary Shares"
+    "name": "Hang Feng Technology Innovation Co., Ltd. - Class A Ordinary Shares"
   },
   {
     "symbol": "FORM",
@@ -9460,6 +9500,10 @@
     "name": "Berto Acquisition Corp. II - Warrants"
   },
   {
+    "symbol": "GUER",
+    "name": "Guerrilla RF, Inc. - Common Stock"
+  },
+  {
     "symbol": "GURE",
     "name": "Gulf Resources, Inc. - Common Stock"
   },
@@ -9670,6 +9714,10 @@
   {
     "symbol": "HCMAW",
     "name": "HCM III Acquisition Corp. - Warrants"
+  },
+  {
+    "symbol": "HCOP",
+    "name": "Hartford Hybrid and Credit Opportunities ETF"
   },
   {
     "symbol": "HCOW",
@@ -11120,6 +11168,10 @@
     "name": "iShares Nasdaq 100 ETF"
   },
   {
+    "symbol": "IQQI",
+    "name": "IncomeQ Nasdaq-100 Premium Income ETF"
+  },
+  {
     "symbol": "IQQQ",
     "name": "ProShares Nasdaq-100 High Income ETF"
   },
@@ -11202,6 +11254,10 @@
   {
     "symbol": "ISHP",
     "name": "First Trust S-Network E-Commerce ETF"
+  },
+  {
+    "symbol": "ISMH",
+    "name": "xETFs International Semiconductor ETF"
   },
   {
     "symbol": "ISNR",
@@ -11894,18 +11950,6 @@
   {
     "symbol": "KOSS",
     "name": "Koss Corporation - Common Stock"
-  },
-  {
-    "symbol": "KOYN",
-    "name": "CSLM Digital Asset Acquisition Corp III - Class A Ordinary Shares"
-  },
-  {
-    "symbol": "KOYNU",
-    "name": "CSLM Digital Asset Acquisition Corp III - Units"
-  },
-  {
-    "symbol": "KOYNW",
-    "name": "CSLM Digital Asset Acquisition Corp III - Warrants"
   },
   {
     "symbol": "KPLT",
@@ -13212,6 +13256,10 @@
     "name": "MDxHealth SA - Ordinary Shares"
   },
   {
+    "symbol": "MEA",
+    "name": "GraniteShares Autocallable META ETF"
+  },
+  {
     "symbol": "MEDP",
     "name": "Medpace Holdings, Inc. - Common Stock"
   },
@@ -13246,10 +13294,6 @@
   {
     "symbol": "MEOH",
     "name": "Methanex Corporation - Common Stock"
-  },
-  {
-    "symbol": "MERC",
-    "name": "Mercer International Inc. - Common Stock"
   },
   {
     "symbol": "MESH",
@@ -14876,6 +14920,10 @@
     "name": "NETCLASS TECHNOLOGY INC - Class A Ordinary Shares"
   },
   {
+    "symbol": "NTCR",
+    "name": "Nuveen Technology & Infrastructure Credit ETF"
+  },
+  {
     "symbol": "NTCT",
     "name": "NetScout Systems, Inc. - Common Stock"
   },
@@ -15074,10 +15122,6 @@
   {
     "symbol": "NWCLW",
     "name": "newcleo plc - Warrants"
-  },
-  {
-    "symbol": "NWE",
-    "name": "NorthWestern Energy Group, Inc.  - Common Stock"
   },
   {
     "symbol": "NWFL",
@@ -15578,18 +15622,6 @@
   {
     "symbol": "OPEN",
     "name": "Opendoor Technologies Inc  - Common Stock"
-  },
-  {
-    "symbol": "OPENL",
-    "name": "Opendoor Technologies Inc  - Series A Warrants, each whole warrant exercisable to purchase one share of Common Stock at an exercise price of $13.00 per warrant"
-  },
-  {
-    "symbol": "OPENW",
-    "name": "Opendoor Technologies Inc  - Series K Warrants, each whole warrant exercisable to purchase one share of Common Stock at an exercise price of $9.00 per warrant"
-  },
-  {
-    "symbol": "OPENZ",
-    "name": "Opendoor Technologies Inc  - Series Z Warrants, each whole warrant exercisable to purchase one share of Common Stock at an exercise price of $17.00 per warrant"
   },
   {
     "symbol": "OPHI",
@@ -16152,6 +16184,10 @@
     "name": "PG&E Corporation"
   },
   {
+    "symbol": "PCHX",
+    "name": "State Street SPDR Nasdaq MyPaycheck ETF"
+  },
+  {
     "symbol": "PCLA",
     "name": "PicoCELA Inc. - American Depositary Shares"
   },
@@ -16162,10 +16198,6 @@
   {
     "symbol": "PCPI",
     "name": "PIMCO Inflation PLUS Active Exchange-Traded Fund"
-  },
-  {
-    "symbol": "PCRX",
-    "name": "Pacira BioSciences, Inc. - Common Stock"
   },
   {
     "symbol": "PCSA",
@@ -16488,6 +16520,10 @@
     "name": "Invesco Global Water ETF"
   },
   {
+    "symbol": "PIVT",
+    "name": "VanEck Pivotal Trends ETF"
+  },
+  {
     "symbol": "PIZ",
     "name": "Invesco Dorsey Wright Developed Markets Momentum ETF"
   },
@@ -16530,10 +16566,6 @@
   {
     "symbol": "PLBY",
     "name": "Playboy, Inc. - Common Stock"
-  },
-  {
-    "symbol": "PLCE",
-    "name": "Children's Place, Inc. (The) - Common Stock"
   },
   {
     "symbol": "PLCI",
@@ -18132,10 +18164,6 @@
     "name": "Defiance Daily Target 2X Long RKLB ETF"
   },
   {
-    "symbol": "RKLZ",
-    "name": "Defiance Daily Target 2x Short RKLB ETF"
-  },
-  {
     "symbol": "RKNG",
     "name": "Defiance Retail Kings ETF"
   },
@@ -18756,10 +18784,6 @@
     "name": "SC II Acquisition Corp. - Units"
   },
   {
-    "symbol": "SCKT",
-    "name": "Socket Mobile, Inc. - Common Stock"
-  },
-  {
     "symbol": "SCLX",
     "name": "Scilex Holding Company - Common Stock"
   },
@@ -18838,6 +18862,10 @@
   {
     "symbol": "SDAWW",
     "name": "SunCar Technology Group Inc. - Warrant"
+  },
+  {
+    "symbol": "SDC",
+    "name": "KICK Space Data Center & Infrastructure Index ETF"
   },
   {
     "symbol": "SDG",
@@ -19062,14 +19090,6 @@
   {
     "symbol": "SHEN",
     "name": "Shenandoah Telecommunications Co - Common Stock"
-  },
-  {
-    "symbol": "SHFS",
-    "name": "SHF Holdings, Inc. - Class A Common Stock"
-  },
-  {
-    "symbol": "SHFSW",
-    "name": "SHF Holdings, Inc. - Warrants"
   },
   {
     "symbol": "SHIM",
@@ -19928,10 +19948,6 @@
     "name": "CYBER HORNET S&P 500 and Solana 75/25 Strategy ETF"
   },
   {
-    "symbol": "SSTI",
-    "name": "SoundThinking, Inc. - Common Stock"
-  },
-  {
     "symbol": "SSYS",
     "name": "Stratasys, Ltd. - Common Stock"
   },
@@ -19998,10 +20014,6 @@
   {
     "symbol": "STLN",
     "name": "Starling Oncology, Inc. - Common Stock"
-  },
-  {
-    "symbol": "STLNW",
-    "name": "Starling Oncology, Inc. - Warrant"
   },
   {
     "symbol": "STNC",
@@ -22048,10 +22060,6 @@
     "name": "VanEck BNB ETF"
   },
   {
-    "symbol": "VBNK",
-    "name": "VersaBank - Common Shares"
-  },
-  {
     "symbol": "VC",
     "name": "Visteon Corporation - Common Stock"
   },
@@ -22450,6 +22458,10 @@
   {
     "symbol": "VRRM",
     "name": "Verra Mobility Corporation - Class A Common Stock"
+  },
+  {
+    "symbol": "VRSA",
+    "name": "Versa Bancorp - Common Stock"
   },
   {
     "symbol": "VRSK",
