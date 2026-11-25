@@ -46,6 +46,12 @@
   }
 
   header .today-date {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  header .last-run {
     margin: 2px 0 24px;
     color: var(--muted);
     font-size: 0.8rem;
@@ -332,6 +338,7 @@
       <h1>Stock Tracker</h1>
       <p class="subtitle" id="subtitle">Loading&hellip;</p>
       <p class="today-date" id="today-date">&nbsp;</p>
+      <p class="last-run" id="last-run">&nbsp;</p>
     </header>
 
     <section class="card headline-card">
@@ -402,7 +409,7 @@
 
     <footer>
       <p>
-        Data source: Yahoo Finance, updated automatically around 6:30pm ET after each
+        Data source: Yahoo Finance, updated automatically at 5:00pm ET after each
         trading day's market close. Weekends and market holidays are skipped since
         there's no new closing price to fetch when the market is closed. This is not
         financial advice.
@@ -413,6 +420,7 @@
 <script>
   const DEFAULT_SYMBOL = "VTSAX";
   const UNIVERSE_URL = "data/universe.json";
+  const LAST_UPDATED_URL = "data/last_updated.json";
   const MAX_SEARCH_RESULTS = 25;
 
   // Colors are pulled from CSS variables so the chart line always matches
@@ -1024,7 +1032,32 @@
     event.target.value = amount.toLocaleString("en-US", { maximumFractionDigits: 0 });
   });
 
+  function formatLastRun(isoTimestamp) {
+    return new Date(isoTimestamp).toLocaleString("en-US", {
+      timeZone: "America/Detroit",
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZoneName: "short",
+    });
+  }
+
+  async function renderLastRun() {
+    const el = document.getElementById("last-run");
+    try {
+      const response = await fetch(LAST_UPDATED_URL, { cache: "no-store" });
+      const { finished_at } = await response.json();
+      el.textContent = `Data last updated: ${formatLastRun(finished_at)}`;
+    } catch (err) {
+      el.textContent = "";
+    }
+  }
+
   async function init() {
+    renderLastRun();
     await loadUniverse();
     await loadHistoryFor(DEFAULT_SYMBOL);
   }

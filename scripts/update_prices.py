@@ -14,6 +14,7 @@ it will take a lot longer than every run after that. See
 
 import json
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yfinance as yf
@@ -21,6 +22,7 @@ import yfinance as yf
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 UNIVERSE_FILE = DATA_DIR / "universe.json"
 PRICES_DIR = DATA_DIR / "prices"
+LAST_UPDATED_FILE = DATA_DIR / "last_updated.json"
 
 # The very first version of this project stored VTSAX's history at this
 # path. If it's still there, seed the new per-ticker file from it so that
@@ -139,6 +141,12 @@ def update_batch(symbols: list[str]) -> int:
     return added
 
 
+def save_last_updated() -> None:
+    """Record when this run finished so the page can show it."""
+    finished_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    LAST_UPDATED_FILE.write_text(json.dumps({"finished_at": finished_at}, indent=2) + "\n")
+
+
 def main() -> None:
     symbols = load_universe_symbols()
     print(f"Updating {len(symbols)} tickers...")
@@ -151,6 +159,7 @@ def main() -> None:
         print(f"Batch {batch_num}/{len(batches)}: {len(batch)} tickers, {added} new price points")
         time.sleep(SECONDS_BETWEEN_BATCHES)
 
+    save_last_updated()
     print(f"Done. {total_added} new price points added across all tickers.")
 
 

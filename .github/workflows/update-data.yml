@@ -2,18 +2,11 @@ name: Update stock prices
 
 on:
   schedule:
-    # Markets close at 4pm ET; closing prices are generally available by ~6-7pm ET.
-    # Cron runs in UTC and doesn't know about daylight saving, so each ET time
-    # below needs two lines (EDT = UTC-4, EST = UTC-5).
-
-    # ~6:30pm ET, weekdays
-    - cron: "30 22 * * 1-5"   # EDT (Mar-Nov)
-    - cron: "30 23 * * 1-5"   # EST (Nov-Mar)
-
-    # Backup run ~9:30pm ET in case a price posted late. Runs land on the
-    # following UTC calendar day, so the weekday range shifts by one.
-    - cron: "30 1 * * 2-6"    # EDT (Mar-Nov)
-    - cron: "30 2 * * 2-6"    # EST (Nov-Mar)
+    # 5:00pm ET, weekdays. Cron runs in UTC and doesn't know about daylight
+    # saving, so there's one line for each offset. scripts/should_run_today.py
+    # drops the one that doesn't match today, plus weekends and NYSE holidays.
+    - cron: "0 21 * * 1-5"   # 5pm EDT (Mar-Nov)
+    - cron: "0 22 * * 1-5"   # 5pm EST (Nov-Mar)
 
   workflow_dispatch: {} # allows manually triggering a run from the Actions tab
 
@@ -39,7 +32,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
+      - name: Skip holidays and the off-season cron
+        id: gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+        run: echo "run=$(python scripts/should_run_today.py)" >> "$GITHUB_OUTPUT"
+
       - name: Make sure the ticker universe exists
+        if: steps.gate.outputs.run == 'true'
         run: |
           if [ ! -f data/universe.json ]; then
             echo "data/universe.json is missing. Run the 'Update ticker universe' workflow first."
@@ -47,16 +48,18 @@ jobs:
           fi
 
       - name: Fetch latest prices
+        if: steps.gate.outputs.run == 'true'
         run: python scripts/update_prices.py
 
-      - name: Commit updated data if it changed
+      - name: Commit updated data
+        if: steps.gate.outputs.run == 'true'
         run: |
-          if [ -z "$(git status --porcelain -- data/prices)" ]; then
+          if [ -z "$(git status --porcelain -- data)" ]; then
             echo "No changes to commit."
             exit 0
           fi
           git config user.name "Price Bot"
           git config user.email "pricebot@vtsax-tracker.local"
-          git add data/prices
-          git commit -m "Update prices ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git add data/prices data/last_updated.json
+          git commit -m "Update prices ($(TZ=America/Detroit date +'%Y-%m-%d %H:%M %Z'))"
           git push

@@ -15,8 +15,9 @@ membership and exchange listings barely change day to day.
 
 `scripts/update_prices.py` reads that list and keeps one price history file
 per ticker under `data/prices/`, pulling closes from Yahoo Finance. A
-scheduled job runs this daily, around 6:30pm ET on weekdays, with a backup
-run around 9:30pm ET in case a price posts late.
+scheduled job runs this at 5:00pm ET on weekdays, skipping NYSE holidays
+(see `scripts/should_run_today.py`). Each run writes its finish time to
+`data/last_updated.json`, which the page shows at the top.
 
 `index.html` reads `data/universe.json` for the search box and whichever
 ticker's price file is selected for everything else, entirely in the
@@ -47,8 +48,9 @@ tickers, so it will take a long time. Every run after that is quick.
   Yahoo Finance is an unofficial data source, not a paid API with
   guaranteed limits, so there is a small chance it throttles requests at
   that volume.
-- The daily job only runs on weekdays. On a market holiday that falls on a
-  weekday, it still runs, finds no new price, and skips the commit.
+- The daily job only runs on weekdays that aren't NYSE holidays. GitHub
+  can start scheduled jobs a bit late when it's busy, so the finish time
+  shown on the page is the source of truth.
 - The data folder will grow as more tickers build up history. If it gets
   too large, trim how far back the price fetch backfills instead of
   pulling full history for every new ticker.
